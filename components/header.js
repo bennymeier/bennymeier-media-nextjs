@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { Box, Heading, Flex, Text, IconButton } from '@chakra-ui/core';
+import { HamburgerIcon, CloseIcon, MoonIcon } from '@chakra-ui/icons';
+import Link from 'next/link';
 
-const MenuItems = ({ children }) => (
+const MenuItems = ({ children, to }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
-    {children}
+    <Link href={to}>
+      <a>{children}</a>
+    </Link>
   </Text>
 );
 
@@ -17,27 +21,24 @@ const Header = (props) => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding="1.5rem"
-      bg="teal.500"
-      color="white"
-      {...props}
+      padding="0.5rem"
+      className="navbar"
     >
       <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg">
-          Chakra UI
-        </Heading>
+        <Link href="/">
+          <a>
+            <Heading as="h1" size="lg">
+              Benny Meier
+            </Heading>
+          </a>
+        </Link>
       </Flex>
 
       <Box display={{ sm: 'block', md: 'none' }} onClick={handleToggle}>
-        <svg
-          fill="white"
-          width="12px"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
+        <IconButton
+          aria-label={`${show ? 'Close menu' : 'Open menu'}`}
+          icon={show ? <CloseIcon /> : <HamburgerIcon />}
+        />
       </Box>
 
       <Box
@@ -46,16 +47,17 @@ const Header = (props) => {
         alignItems="center"
         flexGrow={1}
       >
-        <MenuItems>Docs</MenuItems>
-        <MenuItems>Examples</MenuItems>
-        <MenuItems>Blog</MenuItems>
+        <MenuItems to="/about">About</MenuItems>
+        <MenuItems to="/projects">Projects</MenuItems>
+        <MenuItems to="/references">References</MenuItems>
+        <MenuItems to="/contact">Contact</MenuItems>
       </Box>
 
       <Box
         display={{ sm: show ? 'block' : 'none', md: 'block' }}
         mt={{ base: 4, md: 0 }}
       >
-        <IconButton aria-label="Switch to dark mode" icon="moon" />
+        <IconButton aria-label="Switch to dark mode" icon={<MoonIcon />} />
       </Box>
     </Flex>
   );

@@ -14,3 +14,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.navbar {
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+}
