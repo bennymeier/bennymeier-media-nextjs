@@ -1,6 +1,6 @@
-import LinkedinIcon from '../icon/linkedin';
-import GithubIcon from '../icon/github';
-import InstagramIcon from '../icon/instagram';
+import LinkedinIcon from '../Icons/Linkedin';
+import GithubIcon from '../Icons/Github';
+import InstagramIcon from '../Icons/Instagram';
 import styles from './SocialMedia.module.css';
 import { IconButton } from '@chakra-ui/core';
 
