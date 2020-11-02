@@ -5,6 +5,7 @@ import SocialMedia from '../components/SocialMedia/SocialMedia';
 import LayoutToggle from '../components/LayoutToggle/LayoutToggle';
 import Me from '../components/Me/Me';
 import Skills from '../components/Skills/Skills';
+import Projects from '../components/Projects/Projects';
 
 export default function Home() {
   return (
@@ -45,6 +46,7 @@ export default function Home() {
             any web application. Through these experiences.
           </Text>
           <Skills />
+          <Projects />
         </div>
       </main>
 
