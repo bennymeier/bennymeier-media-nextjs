@@ -4,6 +4,7 @@ import { Heading, Text } from '@chakra-ui/core';
 import SocialMedia from '../components/SocialMedia/SocialMedia';
 import LayoutToggle from '../components/LayoutToggle/LayoutToggle';
 import Me from '../components/Me/Me';
+import Skills from '../components/Skills/Skills';
 
 export default function Home() {
   return (
@@ -29,9 +30,21 @@ export default function Home() {
             </Text>
             ,
             <br />
-            Student, and intern at United Planet GmbH.
+            Student and intern at United Planet GmbH.
           </Heading>
           <Me />
+          <Text>
+            I'm a 24 year old student at DHBW Lörrach currently studying
+            Business Informatics. Before I did three years an apprenticeship as
+            an application developer.
+          </Text>
+          <br />
+          <Text>
+            As I've grown as a developer, I've worked alongside senior designers
+            and developers who have raised my standards for whats expected of
+            any web application. Through these experiences.
+          </Text>
+          <Skills />
         </div>
       </main>
 
