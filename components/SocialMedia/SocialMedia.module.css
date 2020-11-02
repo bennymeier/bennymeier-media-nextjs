@@ -1,0 +1,17 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  width: 200px;
+  border-bottom: 2px solid black;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-media a {
+  margin: 0 10px;
+}

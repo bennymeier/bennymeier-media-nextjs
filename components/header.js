@@ -11,7 +11,7 @@ const MenuItems = ({ children, to }) => (
   </Text>
 );
 
-const Header = (props) => {
+const Header = () => {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
 

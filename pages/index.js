@@ -1,6 +1,9 @@
 import Head from 'next/head';
+import Image from 'next/image';
 import { Heading, Text } from '@chakra-ui/core';
-import Header from '../components/header';
+import SocialMedia from '../components/SocialMedia/SocialMedia';
+import LayoutToggle from '../components/LayoutToggle/LayoutToggle';
+import Me from '../components/Me/Me';
 
 export default function Home() {
   return (
@@ -9,18 +12,27 @@ export default function Home() {
         <title>Benny Meier Media // Frontend Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
+      <header>
+        <div className="container">
+          <Image className="logo" src="/img/logo_black.png" unsized />
+          <LayoutToggle />
+          <SocialMedia />
+        </div>
+      </header>
       <main>
-        <Heading>
-          Hi there, I’m Benny.
-          <br />
-          <Text as="span" color="teal.300">
-            Frontend Developer
-          </Text>
-          ,
-          <br />
-          Student, and intern at United Planet GmbH.
-        </Heading>
+        <div className="container">
+          <Heading>
+            Hi there, I’m Benny.
+            <br />
+            <Text as="span" color="teal.300">
+              Frontend Developer
+            </Text>
+            ,
+            <br />
+            Student, and intern at United Planet GmbH.
+          </Heading>
+          <Me />
+        </div>
       </main>
 
       <footer></footer>

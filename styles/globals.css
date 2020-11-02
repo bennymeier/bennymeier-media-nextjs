@@ -15,7 +15,10 @@ a {
   box-sizing: border-box;
 }
 
-.navbar {
-  border-bottom: 1px solid #eaeaea;
-  position: sticky;
+.container {
+  padding: 20px;
+}
+
+.logo {
+  max-width: 100px;
 }
