@@ -3,6 +3,7 @@ import Skills from '../components/Skills/Skills';
 import Projects from '../components/Projects/Projects';
 import Introduction from '../components/Introduction/Introduction';
 import Header from '../components/Header/Header';
+import NavbarSmall from '../components/Navbar/NavbarSmall';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <title>Benny Meier Media // Frontend Developer</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <NavbarSmall />
       <header>
         <Header />
       </header>
