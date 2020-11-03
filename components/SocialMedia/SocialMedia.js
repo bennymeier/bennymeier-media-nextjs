@@ -3,6 +3,7 @@ import GithubIcon from '../Icons/Github';
 import InstagramIcon from '../Icons/Instagram';
 import styles from './SocialMedia.module.css';
 import { IconButton } from '@chakra-ui/core';
+import { useColorModeValue, Box } from '@chakra-ui/core';
 
 const SOCIAL_MEDIA = [
   {
@@ -12,12 +13,12 @@ const SOCIAL_MEDIA = [
   },
   {
     name: 'Instagram',
-    url: '',
+    url: 'https://www.instagram.com/benny_meier/',
     icon: <InstagramIcon />,
   },
   {
     name: 'LinkedIn',
-    url: '',
+    url: 'https://www.linkedin.com/in/benjaminmeiermedia/',
     icon: <LinkedinIcon />,
   },
 ];
@@ -26,9 +27,11 @@ const SOCIAL_MEDIA = [
  * @todo Add tooltips to icons, use forwardRef
  */
 const SocialMedia = () => {
+  const mode = useColorModeValue('', 'white');
+
   return (
     <div className={styles.flex}>
-      <div className={styles.divider}></div>
+      <Box className={styles.divider} borderBottomColor={mode || "teal.500"}></Box>
       <div className={styles['social-media']}>
         {SOCIAL_MEDIA.map((media) => {
           return (
@@ -38,7 +41,7 @@ const SocialMedia = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IconButton>{media.icon}</IconButton>
+              <IconButton fill={mode}>{media.icon}</IconButton>
             </a>
           );
         })}

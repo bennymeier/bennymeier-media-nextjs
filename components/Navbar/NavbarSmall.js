@@ -20,7 +20,7 @@ const Logo = () => {
 
 const NavbarSmall = () => {
   const bg = useColorModeValue('white', 'gray.800');
-  const borderColor = useColorModeValue('gray.200', '#ffffff29');
+  const borderColor = useColorModeValue('#EDF2F7', '#2D3748');
 
   return (
     <>
@@ -29,6 +29,7 @@ const NavbarSmall = () => {
         as="nav"
         bg={bg}
         borderBottom={`1px solid ${borderColor}`}
+        borderTop="3px solid #319795"
       >
         <Logo />
         <div>
