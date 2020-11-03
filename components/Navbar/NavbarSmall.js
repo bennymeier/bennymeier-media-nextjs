@@ -1,7 +1,8 @@
 import styles from './NavbarSmall.module.css';
 import Image from 'next/image';
 import LayoutToggle from '../LayoutToggle/LayoutToggle';
-import { Box, useColorModeValue } from '@chakra-ui/core';
+import { Box, Link, useColorModeValue } from '@chakra-ui/core';
+import NextLink from 'next/link';
 
 /**
  * @todo Add white_logo with full sizes cuz toggling mode changes height of logo
@@ -9,12 +10,16 @@ import { Box, useColorModeValue } from '@chakra-ui/core';
 const Logo = () => {
   const image = useColorModeValue('black', 'white');
   return (
-    <Image
-      className="logo"
-      src={`/img/logo_${image}.png`}
-      unsized
-      key={image}
-    />
+    <NextLink href="/" passHref css={{ outline: 'none' }}>
+      <Link>
+        <Image
+          className="logo"
+          src={`/img/logo_${image}.png`}
+          unsized
+          key={image}
+        />
+      </Link>
+    </NextLink>
   );
 };
 
