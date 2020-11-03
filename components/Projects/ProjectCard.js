@@ -1,25 +1,24 @@
-import { Heading, Text, Link } from '@chakra-ui/core';
+import { Heading, Text, Link, Box } from '@chakra-ui/core';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
-import Image from 'next/image';
+import Mockup from '../Mockup/Mockup';
 
-const ProjectCard = ({ title, description, url }) => {
+const ProjectCard = ({ title, description, url, imageUrl, internalUrl }) => {
   return (
-    <div>
-      <NextLink href={`/${url}`}>
-        <a>
-          <Heading>{title}</Heading>
-        </a>
-      </NextLink>
-      <Text>{description}</Text>
-      <NextLink href={`/${url}`}>
+    <Box maxWidth="600px">
+      {imageUrl && <Mockup imageUrl={imageUrl} />}
+      <NextLink href={`/${internalUrl}`}>
         <Link>
-          <strong>
-            VIEW PROJECT <ChevronRightIcon />
-          </strong>
+          <Heading as="h3">{title}</Heading>
         </Link>
       </NextLink>
-    </div>
+      <Text>{description}</Text>
+      <NextLink href={`/${internalUrl}`}>
+        <Link>
+          VIEW PROJECT <ChevronRightIcon />
+        </Link>
+      </NextLink>
+    </Box>
   );
 };
 
