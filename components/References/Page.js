@@ -14,9 +14,11 @@ import Stack from '../Stack/Stack';
  * @description Renders a component for the references
  * @param {string} title Title for heading
  * @param {string} description Describes the reference
- * @param {string[]} builtWith Array with technologies used
+ * @param {string[]} stack Array with technologies used
+ * @param {string} url URL to website or GitHub repository
+ * @param {string} type Personal, Commercial or Team Project
  */
-const Page = ({ title, description, builtWith = [], url, image }) => {
+const Page = ({ title, description, stack = [], url, image, type }) => {
   return (
     <>
       <NavbarSmall />
@@ -25,22 +27,8 @@ const Page = ({ title, description, builtWith = [], url, image }) => {
         <Text mt="2em" mb="2em">
           {description}
         </Text>
-        <Stack
-          type="Personal"
-          stack={['Wordpress']}
-          live="https://loewen-voerstetten.de"
-        />
+        <Stack type={type} stack={stack} live={url} />
         <Image src={`/img/${image}.png`} unsized />
-        <Box>
-          <UnorderedList>
-            {builtWith.map((technology) => {
-              return <ListItem>{technology}</ListItem>;
-            })}
-          </UnorderedList>
-        </Box>
-        <Link href={url} isExternal>
-          Website
-        </Link>
       </Box>
     </>
   );

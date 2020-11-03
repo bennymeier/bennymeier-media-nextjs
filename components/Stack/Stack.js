@@ -59,7 +59,7 @@ const Stack = (props) => {
                 {id}
               </Heading>
               <UnorderedList styleType="none">
-                {property === 'type' && <TypeStack url={data} />}
+                {property === 'type' && <TypeStack type={data} />}
                 {property === 'stack' && <TechStack technologies={data} />}
                 {property === 'code' ||
                   (property === 'live' && (
