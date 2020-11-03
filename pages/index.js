@@ -6,7 +6,7 @@ import Introduction from '../components/Introduction/Introduction';
 import Header from '../components/Header/Header';
 import NavbarSmall from '../components/Navbar/NavbarSmall';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -35,4 +35,6 @@ export default function Home() {
       <footer></footer>
     </>
   );
-}
+};
+
+export default Home;
