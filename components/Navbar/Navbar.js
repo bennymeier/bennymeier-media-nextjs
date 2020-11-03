@@ -11,7 +11,7 @@ const MenuItems = ({ children, to }) => (
   </Text>
 );
 
-const Header = () => {
+const Navbar = () => {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
 
@@ -63,4 +63,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
