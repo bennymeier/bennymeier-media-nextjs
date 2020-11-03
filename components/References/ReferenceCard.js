@@ -3,7 +3,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import Mockup from '../Mockup/Mockup';
 
-const ProjectCard = ({ title, description, url, imageUrl, internalUrl }) => {
+const RefrenceCard = ({ title, description, url, imageUrl, internalUrl }) => {
   return (
     <Box maxWidth="600px">
       {imageUrl && <Mockup imageUrl={imageUrl} />}
@@ -15,11 +15,11 @@ const ProjectCard = ({ title, description, url, imageUrl, internalUrl }) => {
       <Text>{description}</Text>
       <NextLink href={`/${internalUrl}`}>
         <Link>
-          VIEW PROJECT<ChevronRightIcon />
+         View Project<ChevronRightIcon />
         </Link>
       </NextLink>
     </Box>
   );
 };
 
-export default ProjectCard;
+export default RefrenceCard;
