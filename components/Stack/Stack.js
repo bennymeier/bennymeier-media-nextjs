@@ -26,7 +26,7 @@ const STACKS = [
   },
 ];
 
-const TypeStack = ({ type }) => {
+const TypeStack = ({ type = 'Personal' }) => {
   return <ListItem>{type}</ListItem>;
 };
 
@@ -36,11 +36,11 @@ const TechStack = ({ technologies = [] }) => {
   });
 };
 
-const CodeAndLiveStack = ({ url }) => {
+const CodeAndLiveStack = ({ url, isGitHub }) => {
   return (
     <ListItem>
       <Link isExternal href={url}>
-        {url}
+        {isGitHub ? 'Repository' : 'View Site'}
       </Link>
     </ListItem>
   );
@@ -49,17 +49,12 @@ const CodeAndLiveStack = ({ url }) => {
 const Stack = (props) => {
   return (
     <Box mb="2em">
-      <Flex>
+      <Flex alignItems="baseline" justifyContent="space-around">
         {STACKS.map((stack) => {
           const { id, property } = stack;
           const data = props[property];
           return (
-            <Flex
-              alignItems="center"
-              flexDirection="column"
-              justifyContent="space-around"
-              key={id}
-            >
+            <Flex alignItems="center" flexDirection="column" key={id}>
               <Heading textTransform="uppercase" size="xs">
                 {id}
               </Heading>
@@ -67,7 +62,12 @@ const Stack = (props) => {
                 {property === 'type' && <TypeStack url={data} />}
                 {property === 'stack' && <TechStack technologies={data} />}
                 {property === 'code' ||
-                  (property === 'live' && <CodeAndLiveStack url={data} />)}
+                  (property === 'live' && (
+                    <CodeAndLiveStack
+                      url={data}
+                      isGitHub={property === 'code'}
+                    />
+                  ))}
               </UnorderedList>
             </Flex>
           );
