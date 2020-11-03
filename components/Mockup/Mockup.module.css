@@ -1,16 +1,9 @@
-/* Browser mockup code
- * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
- * Live example: https://updown.io
- */
-
 .browser-mockup {
   border-top: 2em solid rgba(230, 230, 230, 0.7);
   box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
   position: relative;
   border-radius: 3px 3px 0 0;
-  margin: 1em;
   transition-duration: 0.3s;
-  /* max-width: 500px; */
 }
 
 .browser-mockup:hover {

@@ -9,13 +9,13 @@ const ProjectCard = ({ title, description, url, imageUrl, internalUrl }) => {
       {imageUrl && <Mockup imageUrl={imageUrl} />}
       <NextLink href={`/${internalUrl}`}>
         <Link>
-          <Heading as="h3">{title}</Heading>
+          <Heading as="h3" isTruncated maxWidth="335px" size="md">{title}</Heading>
         </Link>
       </NextLink>
       <Text>{description}</Text>
       <NextLink href={`/${internalUrl}`}>
         <Link>
-          VIEW PROJECT <ChevronRightIcon />
+          VIEW PROJECT<ChevronRightIcon />
         </Link>
       </NextLink>
     </Box>
