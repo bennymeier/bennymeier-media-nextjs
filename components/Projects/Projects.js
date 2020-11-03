@@ -2,7 +2,7 @@ import { Box, Heading } from '@chakra-ui/core';
 
 const Projects = () => {
   return (
-    <Box>
+    <Box as="section" id="projects">
       <Heading mb="1em">My Projects</Heading>
     </Box>
   );

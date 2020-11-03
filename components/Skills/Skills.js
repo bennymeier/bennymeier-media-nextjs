@@ -2,7 +2,7 @@ import { Heading, Text, Box } from '@chakra-ui/core';
 
 const Skills = () => {
   return (
-    <Box>
+    <Box as="section" id="skills">
       <Heading mb="30">My Skills</Heading>
       <Text>
         Through my studies, I've gained a solid understanding of computer

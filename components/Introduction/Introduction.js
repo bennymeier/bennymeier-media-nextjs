@@ -1,9 +1,9 @@
-import { Heading, Text } from '@chakra-ui/core';
+import { Heading, Text, Box } from '@chakra-ui/core';
 import Me from '../Me/Me';
 
 const Introduction = () => {
   return (
-    <>
+    <Box as="section" id="introduction">
       <Heading>
         Hi there, I’m Benny.
         <br />
@@ -25,7 +25,7 @@ const Introduction = () => {
         developers who have raised my standards for whats expected of any web
         application. Through these experiences.
       </Text>
-    </>
+    </Box>
   );
 };
 

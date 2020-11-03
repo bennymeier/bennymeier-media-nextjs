@@ -19,6 +19,10 @@ a {
   padding: 20px;
 }
 
+.container > section {
+  margin: 2em 0;
+}
+
 @media (min-width: 1200px) {
   .container {
     padding: 50px;

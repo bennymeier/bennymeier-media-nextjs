@@ -58,7 +58,7 @@ const REFERENCES = [
 
 const References = () => {
   return (
-    <Box>
+    <Box as="section" id="references">
       <Heading mb="1em">My References</Heading>
       <Text mb="3em">I design and develop websites for companies and people. It's always a challenge with much fun!</Text>
       <SimpleGrid columns={[1, 1, 2]} spacing="40px">
