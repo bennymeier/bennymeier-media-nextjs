@@ -23,7 +23,9 @@ const Page = ({ title, description: Desc, stack = [], url, images, type }) => {
     <>
       <NavbarSmall />
       <Box className="container">
-        <Heading mt="1em" mb="2em">{title}</Heading>
+        <Heading mt="1em" mb="2em">
+          {title}
+        </Heading>
         {typeof description === 'string' && (
           <Text mt="2em" mb="2em">
             {Desc}
@@ -32,7 +34,14 @@ const Page = ({ title, description: Desc, stack = [], url, images, type }) => {
         {typeof Desc === 'function' && <Desc />}
         <Stack type={type} stack={stack} live={url} />
         {images.map((image) => {
-          return <Image src={`/img/${images}.png`} unsized key={image} />;
+          return (
+            <Image
+              src={`/img/${images}.png`}
+              unsized
+              key={image}
+              className="round"
+            />
+          );
         })}
       </Box>
     </>

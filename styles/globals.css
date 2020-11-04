@@ -11,6 +11,10 @@ a {
   text-decoration: none;
 }
 
+.round {
+  border-radius: 4px;
+}
+
 * {
   box-sizing: border-box;
 }

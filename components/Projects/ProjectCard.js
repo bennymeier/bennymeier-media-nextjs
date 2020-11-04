@@ -12,7 +12,7 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
             key={image}
             src={`/img/projects/${image}.png`}
             unsized
-            className="zoom-in"
+            className="zoom-in round"
           />
         );
       })}
