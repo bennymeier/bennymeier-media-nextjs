@@ -9,6 +9,8 @@ const theme = extendTheme({
     global: (props) => ({
       p: {
         color: props.colorMode === 'dark' ? 'gray.200' : 'gray.600',
+        lineHeight: '185%',
+        letterSpacing: '0.03em',
       },
     }),
   },
