@@ -45,15 +45,19 @@ const REFERENCES = [
     imageUrl: 'bennymeier',
     internalUrl: 'bennymeier',
     title: 'Benny Meier Photography',
-    description:
-      'My photography website with pictures from America, London, a road trip through France, Spain, Gibraltar and Portugal, and pictures from my home country.',
+    description: `My photography website with pictures from America, London, a road trip through 
+    France, Spain, Gibraltar and Portugal, and pictures from my home country.`,
   },
   {
     url: 'https://www.sabrowski-abbautechnik.de',
     imageUrl: 'sabrowski-abbautechnik',
     internalUrl: 'sabrowski-abbautechnik',
     title: 'Sabrowski Beton-Abbautechnik',
-    description: 'Lorem ipsum dolor sit atmet.',
+    description: `The company is a medium-sized, dynamic concrete drilling and sawing company that uses the latest 
+    technology to dismantle reinforced concrete, masonry, etc. without dust and vibration and thus in an environmentally 
+    friendly manner.
+    Using a special grinding technique, we are able to renovate surfaces such as concrete or screed, prepare the substrate
+     or polish directly used surfaces to a high gloss.`,
     inProgress: true,
   },
   {
@@ -61,8 +65,9 @@ const REFERENCES = [
     imageUrl: 'bennymeier-media',
     internalUrl: 'bennymeier-media',
     title: 'Benny Meier Media Old Version',
-    description:
-      'My very first own website, my very own portfolio. Starting with Bootstrap v2.3.2 and constantly updated up to Bootstrap v4.0. I had the website from 2015 until the end of 2020. Welcome to my new website!',
+    description: `My very first own website, my very own portfolio. Starting with Bootstrap v2.3.2
+       and constantly updated up to Bootstrap v4.0. I had the website from 2015 until the 
+       end of 2020. Welcome to my new website!`,
   },
 ];
 
