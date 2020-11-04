@@ -23,6 +23,7 @@ const Description = () => {
 const Project = () => {
   return (
     <Page
+      githubUrl="https://github.com/bennymeier/react-weather-app"
       stack={['React', 'Open Weather Map API', 'Geolocation API']}
       type="Personal"
       images={['projects/react-weather-app']}

@@ -8,7 +8,7 @@ const Description = () => {
         I have tried to use the well known MERN stack in a meaningful way. I had
         the idea of a Kanban Board, similar to Jira Project Management.
       </Text>
-      <Text>
+      <Text mt="1em">
         You can create project boards to which you can later assign tasks, bugs,
         features or epics. These different types can then be moved in the Kanban
         Board, e.g. a bug can be moved from Todo to In Progress and when it is
@@ -66,11 +66,12 @@ const Project = () => {
         'MongoDB',
         'Mongoose',
       ]}
+      githubUrl="https://github.com/bennymeier/mern-stack-project-management"
       type="Personal"
       images={['projects/mern-stack-project-management-login']}
       description={Description}
       title="MERN Stack Project Management"
-      url="#"
+      url={false}
     />
   );
 };

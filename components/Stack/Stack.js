@@ -5,6 +5,7 @@ import {
   Heading,
   Link,
   Box,
+  Badge,
 } from '@chakra-ui/core';
 
 const STACKS = [
@@ -36,11 +37,27 @@ const TechStack = ({ technologies = [] }) => {
   });
 };
 
-const CodeAndLiveStack = ({ url, isGitHub }) => {
+const LiveStack = ({ url }) => {
+  if (!url) {
+    return <Badge>Coming soon</Badge>;
+  }
   return (
     <ListItem>
       <Link isExternal href={url}>
-        {isGitHub ? 'Repository' : 'View Site'}
+        View Site
+      </Link>
+    </ListItem>
+  );
+};
+
+const CodeStack = ({ url }) => {
+  if (!url) {
+    return <Badge>Coming soon</Badge>;
+  }
+  return (
+    <ListItem>
+      <Link isExternal href={url}>
+        View Repository
       </Link>
     </ListItem>
   );
@@ -61,13 +78,8 @@ const Stack = (props) => {
               <UnorderedList styleType="none">
                 {property === 'type' && <TypeStack type={data} />}
                 {property === 'stack' && <TechStack technologies={data} />}
-                {property === 'code' ||
-                  (property === 'live' && (
-                    <CodeAndLiveStack
-                      url={data}
-                      isGitHub={property === 'code'}
-                    />
-                  ))}
+                {property === 'live' && <LiveStack url={data} />}
+                {property === 'code' && <CodeStack url={data} />}
               </UnorderedList>
             </Flex>
           );

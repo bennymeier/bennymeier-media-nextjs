@@ -1,11 +1,4 @@
-import {
-  Box,
-  Heading,
-  UnorderedList,
-  ListItem,
-  Text,
-  Link,
-} from '@chakra-ui/core';
+import { Box, Heading, Text } from '@chakra-ui/core';
 import Image from 'next/image';
 import NavbarSmall from '../Navbar/NavbarSmall';
 import Stack from '../Stack/Stack';
@@ -18,7 +11,7 @@ import Stack from '../Stack/Stack';
  * @param {string} url URL to website or GitHub repository
  * @param {string} type Personal, Commercial or Team Project
  */
-const Page = ({ title, description: Desc, stack = [], url, images, type }) => {
+const Page = ({ title, description: Desc, stack = [], url, images, type, githubUrl }) => {
   return (
     <>
       <NavbarSmall />
@@ -32,7 +25,7 @@ const Page = ({ title, description: Desc, stack = [], url, images, type }) => {
           </Text>
         )}
         {typeof Desc === 'function' && <Desc />}
-        <Stack type={type} stack={stack} live={url} />
+        <Stack type={type} stack={stack} live={url} code={githubUrl}/>
         {images.map((image) => {
           return (
             <Image

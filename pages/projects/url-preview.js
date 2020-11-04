@@ -5,40 +5,19 @@ const Description = () => {
   return (
     <Box mb="2em">
       <Text>
-        Since there are almost only YouTube downloaders with adblockers on the
-        internet, I developed one myself. The design comes with a light and dark
-        mode. In the backend several APIs are provided for the frontend.
+        Nowadays it is impossible to imagine life without them. A link preview,
+        which shows the user valuable information of a linked website, e.g.
+        title, description and a picture of the website.
       </Text>
-      <br />
-      <Text>There are the following:</Text>
-      <UnorderedList ml="2em">
-        <ListItem>
-          /suggestions
-          <Text>
-            If the user does not enter a link, this API is called and the user
-            gets suggestions.
-          </Text>
-        </ListItem>
-        <ListItem>
-          /metainfo
-          <Text>
-            This is where the basic information of the video is retrieved, such
-            as title, description, views, likes and dislikes.
-          </Text>
-        </ListItem>
-        <ListItem>
-          /watch
-          <Text>
-            With the two parameters Format and URL the download is prepared
-            here. The title comes from the metainfo API and is used as filename.
-            But you have to delete Special Characters first.
-          </Text>
-        </ListItem>
-      </UnorderedList>
-      <br />
-      <Text>
-        Then the appropriate Content-Disposition Header is set, so that the file
-        is downloadable.
+      <Text mt="1em">
+        For this purpose, very specific SEO technical metatags are crawled, e.g.
+        Open Graph metatags or the Twitter metatags or the normal HTML metatags.
+      </Text>
+      <Text mt="1em">
+        In the backend there is built an GET Request API built for the frontend.
+        The frontend sends the URL of the website to the backend, then the
+        backend opens the website headless, thanks to the Google Puppeteer
+        library, and crawls the text out of some metatags.
       </Text>
     </Box>
   );
@@ -47,12 +26,12 @@ const Description = () => {
 const Project = () => {
   return (
     <Page
-      stack={['React', 'Node.js', 'Axios']}
+      stack={['React', 'Node.js', 'Express.js', 'Puppeteer']}
       type="Personal"
-      images={['projects/youtube-downloader']}
+      images={['projects/url-preview']}
       description={Description}
-      title="YouTube Downloader"
-      url="https://youtubdle.com"
+      title="URL Preview"
+      url={false}
     />
   );
 };

@@ -15,6 +15,7 @@ const Description = () => {
 const Project = () => {
   return (
     <Page
+      githubUrl="https://github.com/bennymeier/react-credit-card-component"
       stack={['React', 'Sass']}
       type="Personal"
       images={['projects/react-credit-card-component']}
