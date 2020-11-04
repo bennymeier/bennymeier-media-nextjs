@@ -1,13 +1,13 @@
-import LayoutToggle from '../LayoutToggle/LayoutToggle';
+import { Box } from '@chakra-ui/core';
 import SocialMedia from '../SocialMedia/SocialMedia';
 
 const Header = () => {
   return (
-    <>
-      <div className="container-social-media">
+    <Box as="header">
+      <Box className="container-social-media">
         <SocialMedia />
-      </div>
-    </>
+      </Box>
+    </Box>
   );
 };
 
