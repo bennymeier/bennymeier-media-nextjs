@@ -1,44 +1,20 @@
-import { ListItem, UnorderedList, Box, Text, Spacer } from '@chakra-ui/core';
+import { Box, Text, Link } from '@chakra-ui/core';
 import Page from '../../components/DetailedPage/Page';
 
 const Description = () => {
   return (
     <Box mb="2em">
       <Text>
-        Since there are almost only YouTube downloaders with adblockers on the
-        internet, I developed one myself. The design comes with a light and dark
-        mode. In the backend several APIs are provided for the frontend.
+        I've seen many Weather Apps built with React out there, so I want to
+        create one by my one.
       </Text>
-      <br />
-      <Text>There are the following:</Text>
-      <UnorderedList>
-        <ListItem>
-          /suggestions
-          <Text>
-            If the user does not enter a link, this API is called and the user
-            gets suggestions.
-          </Text>
-        </ListItem>
-        <ListItem>
-          /metainfo
-          <Text>
-            This is where the basic information of the video is retrieved, such
-            as title, description, views, likes and dislikes.
-          </Text>
-        </ListItem>
-        <ListItem>
-          /watch
-          <Text>
-            With the two parameters Format and URL the download is prepared
-            here. The title comes from the metainfo API and is used as filename.
-            But you have to delete Special Characters first.
-          </Text>
-        </ListItem>
-      </UnorderedList>
-      <br />
-      <Text>
-        Then the appropriate Content-Disposition Header is set, so that the file
-        is downloadable.
+      <Text mt="1em">
+        To locate the user and get to his coordinates I used the Geolocation
+        API. To get the current weather, I used the {/* */}
+        <Link href="https://openweathermap.org/api" isExternal>
+          Open Weather Map API
+        </Link>
+        , which gives me a 5 day preview.
       </Text>
     </Box>
   );
@@ -47,12 +23,12 @@ const Description = () => {
 const Project = () => {
   return (
     <Page
-      stack={['React', 'Node.js', 'Axios']}
+      stack={['React', 'Open Weather Map API', 'Geolocation API']}
       type="Personal"
-      images={['projects/youtube-downloader']}
+      images={['projects/react-weather-app']}
       description={Description}
-      title="YouTube Downloader"
-      url="https://youtubdle.com"
+      title="React Weather App"
+      url="https://react-weather-app-brown.now.sh/"
     />
   );
 };

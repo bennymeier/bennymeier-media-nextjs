@@ -40,7 +40,7 @@ const Description = () => {
         I have also worked with new libraries, including Passport.js and JWT.{' '}
         {/* */}
         <strong>Passport.js</strong> for easy authentication in Node.js in
-        combination with JWT.
+        combination with <strong>JWT</strong>.
         <br />
       </Text>
     </Box>

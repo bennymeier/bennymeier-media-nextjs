@@ -11,7 +11,7 @@ const Description = () => {
       </Text>
       <br />
       <Text>There are the following:</Text>
-      <UnorderedList>
+      <UnorderedList ml="2em">
         <ListItem>
           /suggestions
           <Text>
