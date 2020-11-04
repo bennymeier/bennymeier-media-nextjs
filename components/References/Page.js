@@ -28,7 +28,7 @@ const Page = ({ title, description, stack = [], url, image, type }) => {
           {description}
         </Text>
         <Stack type={type} stack={stack} live={url} />
-        <Image src={`/img/${image}.png`} unsized />
+        <Image src={`/img/references/${image}.png`} unsized />
       </Box>
     </>
   );

@@ -5,7 +5,7 @@ import { Box } from '@chakra-ui/core';
 const Mockup = ({ imageUrl }) => {
   return (
     <Box className={`${styles['browser-mockup']} ${styles['with-url']}`} mb="1em">
-      <Image src={`/img/${imageUrl}.png`} unsized />
+      <Image src={`/img/references/${imageUrl}.png`} unsized />
     </Box>
   );
 };
