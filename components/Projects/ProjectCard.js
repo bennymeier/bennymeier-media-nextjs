@@ -1,32 +1,34 @@
-const { Box, Heading, Link, Text } = require('@chakra-ui/core');
+import { Box, Heading, Link, Text, useColorModeValue } from '@chakra-ui/core';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import NextLink from 'next/link';
 
 const ProjectCard = ({ title, description, images, url, internalUrl }) => {
+  const linkColor = useColorModeValue('gray.800', 'teal.300');
+
   return (
     <Box maxWidth="600px">
       {images.map((image) => {
         return (
-          <Image
-            key={image}
-            src={`/img/projects/${image}.png`}
-            unsized
-            className="zoom-in round"
-          />
+          <NextLink href={`/projects/${internalUrl}`} passHref>
+            <Link>
+              <Image
+                key={image}
+                src={`/img/projects/${image}.png`}
+                unsized
+                className="zoom-in round"
+              />
+            </Link>
+          </NextLink>
         );
       })}
       <Box mt="2em">
-        <NextLink href={`/projects/${internalUrl}`} passHref>
-          <Link>
-            <Heading as="h3" isTruncated maxWidth="335px" size="md">
-              {title}
-            </Heading>
-          </Link>
-        </NextLink>
+        <Heading as="h3" isTruncated maxWidth="335px" size="md">
+          {title}
+        </Heading>
         <Text>{description}</Text>
         <NextLink href={`/projects/${internalUrl}`} passHref>
-          <Link>
+          <Link color={linkColor}>
             View More
             <ChevronRightIcon />
           </Link>

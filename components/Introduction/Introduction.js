@@ -10,7 +10,7 @@ const Introduction = () => {
         <Text as="span" color="teal.300">
           Frontend Developer
         </Text>
-        <Text>and working at United Planet.</Text>
+        <Text lineHeight="initial">and working at United Planet.</Text>
       </Heading>
       <Me />
       <Text className="description">
