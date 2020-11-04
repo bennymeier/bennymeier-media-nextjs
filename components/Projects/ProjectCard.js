@@ -9,6 +9,7 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
       {images.map((image) => {
         return (
           <Image
+            key={image}
             src={`/img/projects/${image}.png`}
             unsized
             className="zoom-in"

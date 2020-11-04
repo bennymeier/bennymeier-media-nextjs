@@ -7,7 +7,9 @@ import {
   Flex,
   useColorModeValue,
 } from '@chakra-ui/core';
+import HeartIcon from '../Icons/Heart';
 import Skill from './Skill';
+
 const GOOD_SKILLS = [
   'HTML',
   'CSS',
@@ -50,7 +52,10 @@ const Skills = () => {
       </Text>
       <Box mb="2em">
         <Flex flexDirection="column">
-        <Heading size="md">My Go-To Stack</Heading>
+          <Heading size="md">
+            <HeartIcon />
+            My Go-To Stack
+          </Heading>
           <Flex>
             <Box>
               <UnorderedList>
@@ -74,7 +79,7 @@ const Skills = () => {
           <Heading size="md">Very good knowledge</Heading>
           <UnorderedList>
             {GOOD_SKILLS.map((skill) => {
-              return <Skill skill={skill} />;
+              return <Skill skill={skill} key={skill} />;
             })}
           </UnorderedList>
         </Box>
@@ -82,7 +87,7 @@ const Skills = () => {
           <Heading size="md">Some knowledge</Heading>
           <UnorderedList>
             {OK_SKILLS.map((skill) => {
-              return <Skill skill={skill} />;
+              return <Skill skill={skill} key={skill} />;
             })}
           </UnorderedList>
         </Box>

@@ -50,7 +50,7 @@ const Projects = () => {
       </Text>
       <SimpleGrid columns={[1, 1, 2]} spacing="40px">
         {PROJECTS.map((project) => {
-          return <ProjectCard {...project} />;
+          return <ProjectCard {...project} key={project.internalUrl} />;
         })}
       </SimpleGrid>
     </Box>
