@@ -26,6 +26,7 @@ const Description = () => {
 const Project = () => {
   return (
     <Page
+      githubUrl="https://github.com/bennymeier/url-preview"
       stack={['React', 'Node.js', 'Express.js', 'Puppeteer']}
       type="Personal"
       images={['projects/url-preview']}

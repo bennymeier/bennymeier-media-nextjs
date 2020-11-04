@@ -10,7 +10,7 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
     <Box maxWidth="600px">
       {images.map((image) => {
         return (
-          <NextLink href={`/projects/${internalUrl}`} passHref>
+          <NextLink href={`/projects/${internalUrl}`} passHref key={image}>
             <Link>
               <Image
                 key={image}

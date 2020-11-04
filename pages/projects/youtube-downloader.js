@@ -47,6 +47,7 @@ const Description = () => {
 const Project = () => {
   return (
     <Page
+      githubUrl="https://github.com/bennymeier/youtube-downloader"
       stack={['React', 'Node.js', 'Axios']}
       type="Personal"
       images={['projects/youtube-downloader']}
