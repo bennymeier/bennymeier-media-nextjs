@@ -5,10 +5,9 @@ import {
   UnorderedList,
   ListItem,
   Flex,
-  Spacer,
+  useColorModeValue,
 } from '@chakra-ui/core';
 import Skill from './Skill';
-
 const GOOD_SKILLS = [
   'HTML',
   'CSS',
@@ -39,6 +38,8 @@ const OK_SKILLS = [
 ];
 
 const Skills = () => {
+  const mode = useColorModeValue('', 'white');
+
   return (
     <Box className="section" as="section" id="skills">
       <Heading className="heading">My Skills</Heading>
@@ -49,7 +50,7 @@ const Skills = () => {
       </Text>
       <Box mb="2em">
         <Flex flexDirection="column">
-          <Heading size="md">My Go-To Stack</Heading>
+        <Heading size="md">My Go-To Stack</Heading>
           <Flex>
             <Box>
               <UnorderedList>

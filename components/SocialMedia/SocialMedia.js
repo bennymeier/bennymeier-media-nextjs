@@ -1,9 +1,13 @@
 import LinkedinIcon from '../Icons/Linkedin';
 import GithubIcon from '../Icons/Github';
 import InstagramIcon from '../Icons/Instagram';
-import styles from './SocialMedia.module.css';
-import { IconButton } from '@chakra-ui/core';
-import { useColorModeValue, Box } from '@chakra-ui/core';
+import {
+  Flex,
+  IconButton,
+  Link,
+  useColorModeValue,
+  Box,
+} from '@chakra-ui/core';
 
 const SOCIAL_MEDIA = [
   {
@@ -27,26 +31,27 @@ const SOCIAL_MEDIA = [
  * @todo Add tooltips to icons, use forwardRef
  */
 const SocialMedia = () => {
-  const mode = useColorModeValue('', 'white');
+  const borderColor = useColorModeValue('teal.300', 'teal.500');
+  const fillColor = useColorModeValue('teal.900', 'white');
 
   return (
-    <div className={styles.flex}>
-      <Box className={styles.divider} borderBottomColor={mode || "teal.500"}></Box>
-      <div className={styles['social-media']}>
+    <Flex alignItems="center">
+      <Box
+        width="200px"
+        borderBottomColor={borderColor}
+        borderBottomWidth="3px"
+        borderBottomStyle="solid"
+      ></Box>
+      <Flex>
         {SOCIAL_MEDIA.map((media) => {
           return (
-            <a
-              key={media.url}
-              href={media.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconButton fill={mode}>{media.icon}</IconButton>
-            </a>
+            <Link key={media.url} href={media.url} isExternal margin="0 10px">
+              <IconButton fill={fillColor}>{media.icon}</IconButton>
+            </Link>
           );
         })}
-      </div>
-    </div>
+      </Flex>
+    </Flex>
   );
 };
 
