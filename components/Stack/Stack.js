@@ -55,7 +55,7 @@ const Stack = (props) => {
           const data = props[property];
           return (
             <Flex alignItems="center" flexDirection="column" key={id}>
-              <Heading textTransform="uppercase" size="xs">
+              <Heading textTransform="uppercase" size="xs" mb="1em">
                 {id}
               </Heading>
               <UnorderedList styleType="none">

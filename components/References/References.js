@@ -3,7 +3,7 @@ import ReferenceCard from './ReferenceCard';
 
 const REFERENCES = [
   {
-    url: 'https://sv-bremgarten.de',
+    url: 'https://www.sv-bremgarten.de',
     imageUrl: 'sv-bremgarten',
     internalUrl: 'sv-bremgarten',
     title: 'SV Hartheim-Bremgarten e.V.',
@@ -11,7 +11,7 @@ const REFERENCES = [
       'Lorem ipsum dolor sit atmet. Lorem ipsum dolor sit atmet. Lorem ipsum dolor.',
   },
   {
-    url: 'https://sfv-bremgarten.de',
+    url: 'https://www.sfv-bremgarten.de',
     imageUrl: 'sfv-bremgarten',
     internalUrl: 'sfv-bremgarten',
     title: 'SFV Bremgarten e.V.',
@@ -26,14 +26,14 @@ const REFERENCES = [
       'Lorem ipsum dolor sit atmet. Lorem ipsum dolor sit atmet. Lorem ipsum dolor.',
   },
   {
-    url: 'https://johannaschnuepke.de',
+    url: 'https://wwww.johannaschnuepke.de',
     imageUrl: 'johannaschnuepke',
     internalUrl: 'johannaschnuepke',
     title: 'Johanna Schnüpke Moderatorin & Journalistin',
     description: 'Lorem ipsum dolor sit atmet.',
   },
   {
-    url: 'https://gehirnmetabologie.de',
+    url: 'https://www.gehirnmetabologie.de',
     imageUrl: 'gehirnmetabologie',
     internalUrl: 'gehirnmetabologie',
     title: 'Stefanie Schopp - Gehirnmetabologin',
@@ -41,7 +41,7 @@ const REFERENCES = [
       'Lorem ipsum dolor sit atmet. Lorem ipsum dolor sit atmet. Lorem ipsum dolor.',
   },
   {
-    url: 'https://bennymeier.de',
+    url: 'https://www.bennymeier.de',
     imageUrl: 'bennymeier',
     internalUrl: 'bennymeier',
     title: 'Benny Meier Photography',
@@ -52,6 +52,13 @@ const REFERENCES = [
     imageUrl: 'sabrowski-abbautechnik',
     internalUrl: 'sabrowski-abbautechnik',
     title: 'Sabrowski Beton-Abbautechnik',
+    description: 'Lorem ipsum dolor sit atmet.',
+  },
+  {
+    url: 'https://www.old.bennymeier-media.de',
+    imageUrl: 'bennymeier-media',
+    internalUrl: 'bennymeier-media',
+    title: 'Benny Meier Media Old Version',
     description: 'Lorem ipsum dolor sit atmet.',
   },
 ];

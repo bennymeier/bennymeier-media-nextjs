@@ -7,15 +7,18 @@ const RefrenceCard = ({ title, description, url, imageUrl, internalUrl }) => {
   return (
     <Box maxWidth="600px">
       {imageUrl && <Mockup imageUrl={imageUrl} />}
-      <NextLink href={`/references/${internalUrl}`}>
+      <NextLink href={`/references/${internalUrl}`} passHref>
         <Link>
-          <Heading as="h3" isTruncated maxWidth="335px" size="md">{title}</Heading>
+          <Heading as="h3" isTruncated maxWidth="335px" size="md">
+            {title}
+          </Heading>
         </Link>
       </NextLink>
       <Text>{description}</Text>
-      <NextLink href={`/references/${internalUrl}`}>
+      <NextLink href={`/references/${internalUrl}`} passHref>
         <Link>
-         View Project<ChevronRightIcon />
+          View Project
+          <ChevronRightIcon />
         </Link>
       </NextLink>
     </Box>
