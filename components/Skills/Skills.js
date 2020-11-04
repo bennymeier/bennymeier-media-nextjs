@@ -7,7 +7,6 @@ import {
   Flex,
   useColorModeValue,
 } from '@chakra-ui/core';
-import HeartIcon from '../Icons/Heart';
 import Skill from './Skill';
 
 const GOOD_SKILLS = [
@@ -52,10 +51,7 @@ const Skills = () => {
       </Text>
       <Box mb="2em">
         <Flex flexDirection="column">
-          <Heading size="md">
-            <HeartIcon />
-            My Go-To Stack
-          </Heading>
+          <Heading size="md">My Go-To Stack</Heading>
           <Flex>
             <Box>
               <UnorderedList>
