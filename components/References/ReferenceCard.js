@@ -12,7 +12,7 @@ const RefrenceCard = ({ title, description, url, imageUrl, internalUrl }) => {
         <Link>{imageUrl && <Mockup imageUrl={imageUrl} />}</Link>
       </NextLink>
       <Box mt="2em">
-        <Heading as="h3" isTruncated maxWidth="335px" size="md">
+        <Heading as="h3" size="md">
           {title}
         </Heading>
         <Text>{description}</Text>

@@ -23,7 +23,7 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
         );
       })}
       <Box mt="2em">
-        <Heading as="h3" isTruncated maxWidth="335px" size="md">
+        <Heading as="h3" size="md">
           {title}
         </Heading>
         <Text>{description}</Text>

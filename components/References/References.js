@@ -8,29 +8,29 @@ const REFERENCES = [
     internalUrl: 'sv-bremgarten',
     title: 'SV Hartheim-Bremgarten e.V.',
     description:
-      'Lorem ipsum dolor sit atmet. Lorem ipsum dolor sit atmet. Lorem ipsum dolor.',
+      'A website for our football club in the village. Built with Wordpress, shows live data thanks to Fupa.',
   },
   {
     url: 'https://www.sfv-bremgarten.de',
     imageUrl: 'sfv-bremgarten',
     internalUrl: 'sfv-bremgarten',
     title: 'SFV Bremgarten e.V.',
-    description: 'Lorem ipsum dolor sit atmet.',
+    description: 'A website for our sports support association in our village.',
   },
   {
     url: 'https://loewen-voerstetten.de',
     imageUrl: 'loewen-voerstetten',
     internalUrl: 'loewen-voerstetten',
     title: 'Gasthaus Zum Löwen',
-    description:
-      'Lorem ipsum dolor sit atmet. Lorem ipsum dolor sit atmet. Lorem ipsum dolor.',
+    description: 'A website for the restaurant of my aunt and uncle.',
   },
   {
     url: 'https://wwww.johannaschnuepke.de',
     imageUrl: 'johannaschnuepke',
     internalUrl: 'johannaschnuepke',
     title: 'Johanna Schnüpke Moderatorin & Journalistin',
-    description: 'Lorem ipsum dolor sit atmet.',
+    description:
+      'A website for my cousin. She is a moderator, journalist and presenter for RTL, WDR and NTV.',
   },
   {
     url: 'https://www.gehirnmetabologie.de',
@@ -38,14 +38,15 @@ const REFERENCES = [
     internalUrl: 'gehirnmetabologie',
     title: 'Stefanie Schopp - Gehirnmetabologin',
     description:
-      'Lorem ipsum dolor sit atmet. Lorem ipsum dolor sit atmet. Lorem ipsum dolor.',
+      'A website about the science of the brain, psychology and brain metabolism for a client.',
   },
   {
     url: 'https://www.bennymeier.de',
     imageUrl: 'bennymeier',
     internalUrl: 'bennymeier',
     title: 'Benny Meier Photography',
-    description: 'Lorem ipsum dolor sit atmet.',
+    description:
+      'My photography website with pictures from America, London, a road trip through France, Spain, Gibraltar and Portugal, and pictures from my home country.',
   },
   {
     url: 'https://www.sabrowski-abbautechnik.de',
@@ -53,13 +54,15 @@ const REFERENCES = [
     internalUrl: 'sabrowski-abbautechnik',
     title: 'Sabrowski Beton-Abbautechnik',
     description: 'Lorem ipsum dolor sit atmet.',
+    inProgress: true,
   },
   {
     url: 'https://www.old.bennymeier-media.de',
     imageUrl: 'bennymeier-media',
     internalUrl: 'bennymeier-media',
     title: 'Benny Meier Media Old Version',
-    description: 'Lorem ipsum dolor sit atmet.',
+    description:
+      'My very first own website, my very own portfolio. Starting with Bootstrap v2.3.2 and constantly updated up to Bootstrap v4.0. I had the website from 2015 until the end of 2020. Welcome to my new website!',
   },
 ];
 
