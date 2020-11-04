@@ -65,9 +65,9 @@ const REFERENCES = [
 
 const References = () => {
   return (
-    <Box as="section" id="references">
-      <Heading mb="1em">My References</Heading>
-      <Text mb="3em">
+    <Box className="section" as="section" id="references">
+      <Heading className="heading">My References</Heading>
+      <Text className="description">
         I design and develop websites for companies and people. Take a look at
         some of the companies I've dedicated my time to.
       </Text>

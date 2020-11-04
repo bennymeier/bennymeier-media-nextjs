@@ -4,7 +4,7 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 const Header = () => {
   return (
     <>
-      <div className="container">
+      <div className="container-social-media">
         <SocialMedia />
       </div>
     </>

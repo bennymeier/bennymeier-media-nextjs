@@ -42,9 +42,9 @@ const PROJECTS = [
 
 const Projects = () => {
   return (
-    <Box as="section" id="projects">
-      <Heading mb="1em">My Projects</Heading>
-      <Text mb="3em">
+    <Box className="section" as="section" id="projects">
+      <Heading className="heading">My Projects</Heading>
+      <Text className="description">
         I like to stay busy and always have a project in the works. Take a look
         at some of the applications and articles I've dedicated my time to.
       </Text>

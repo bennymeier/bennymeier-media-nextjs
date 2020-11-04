@@ -15,17 +15,30 @@ a {
   box-sizing: border-box;
 }
 
-.container {
-  padding: 20px;
+.container,
+.container-social-media {
+  padding: 1.5em 2em 2em 2em;
 }
 
-.container > section {
-  margin: 2em 0;
+.section:not(:first-child) {
+  margin: 5em 0 0 0;
+}
+
+.section:not(:first-child) .heading {
+  margin: 1em 0 0.5em 0;
+}
+
+.section:not(:first-child) .description {
+  margin: 0 0 1em 0;
 }
 
 @media (min-width: 1200px) {
   .container {
-    padding: 50px;
+    padding: 0 4em 4em 4em;
+  }
+
+  .container-social-media {
+    padding: 2em 4em 2em 4em;
   }
 }
 
