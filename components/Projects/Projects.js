@@ -45,8 +45,8 @@ const Projects = () => {
     <Box as="section" id="projects">
       <Heading mb="1em">My Projects</Heading>
       <Text mb="3em">
-        Lorem ipsum dolor sit atmet, lorem ipsum dolor sit atmet, lorem ipsum
-        dolor. Sit atmet, lorem ipsum.
+        I like to stay busy and always have a project in the works. Take a look
+        at some of the applications and articles I've dedicated my time to.
       </Text>
       <SimpleGrid columns={[1, 1, 2]} spacing="40px">
         {PROJECTS.map((project) => {

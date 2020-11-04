@@ -68,8 +68,8 @@ const References = () => {
     <Box as="section" id="references">
       <Heading mb="1em">My References</Heading>
       <Text mb="3em">
-        I design and develop websites for companies and people. It's always a
-        challenge with much fun!
+        I design and develop websites for companies and people. Take a look at
+        some of the companies I've dedicated my time to.
       </Text>
       <SimpleGrid columns={[1, 1, 2]} spacing="40px">
         {REFERENCES.map((reference) => {

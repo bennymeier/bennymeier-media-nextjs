@@ -35,6 +35,7 @@ const Description = () => {
           </Text>
         </ListItem>
       </UnorderedList>
+      <br />
       <Text>
         Then the appropriate Content-Disposition Header is set, so that the file
         is downloadable.

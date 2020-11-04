@@ -29,6 +29,11 @@ a {
   }
 }
 
+.zoom-in:hover {
+  transition-duration: 0.3s;
+  transform: scale(1.03);
+}
+
 .logo {
   max-width: 65px;
 }

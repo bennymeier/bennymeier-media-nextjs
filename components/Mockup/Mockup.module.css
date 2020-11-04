@@ -3,11 +3,6 @@
   /* box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4); */
   position: relative;
   border-radius: 3px 3px 0 0;
-  transition-duration: 0.3s;
-}
-
-.browser-mockup:hover {
-  transform: scale(1.03);
 }
 
 .browser-mockup:before {
