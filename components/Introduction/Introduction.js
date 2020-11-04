@@ -21,7 +21,8 @@ const Introduction = () => {
         <br />
         As I've grown as a developer, I've worked alongside senior designers and
         developers who have raised my standards for whats expected of any web
-        application. Through these experiences.
+        application. Through these experiences. I'm focused on building
+        high-quality, thoughtful, and intuitive websites and web applications.
       </Text>
     </Box>
   );
