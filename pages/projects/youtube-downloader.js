@@ -5,7 +5,7 @@ const Project = () => {
     <Page
       stack={['React', 'Node.js', 'Axios']}
       type="Personal"
-      image={['projects/youtube-downloader']}
+      images={['projects/youtube-downloader']}
       description="Since there are almost only YouTube downloaders with adblockers on the internet, I developed one myself. In the backend several APIs are provided for the frontend. There are the following:
       - /suggestions
       If the user does not enter a link, this API is called and the user gets suggestions.
