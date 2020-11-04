@@ -18,7 +18,7 @@ import Stack from '../Stack/Stack';
  * @param {string} url URL to website or GitHub repository
  * @param {string} type Personal, Commercial or Team Project
  */
-const Page = ({ title, description, stack = [], url, image, type }) => {
+const Page = ({ title, description, stack = [], url, images, type }) => {
   return (
     <>
       <NavbarSmall />
@@ -28,7 +28,9 @@ const Page = ({ title, description, stack = [], url, image, type }) => {
           {description}
         </Text>
         <Stack type={type} stack={stack} live={url} />
-        <Image src={`/img/references/${image}.png`} unsized />
+        {images.map((image) => {
+          return <Image src={`/img/${images}.png`} unsized key={image} />;
+        })}
       </Box>
     </>
   );

@@ -1,4 +1,4 @@
-import { Box, Heading } from '@chakra-ui/core';
+import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/core';
 import ProjectCard from './ProjectCard';
 
 const PROJECTS = [
@@ -6,30 +6,36 @@ const PROJECTS = [
     title: 'React Credit Card Component',
     description: '',
     images: ['react-credit-card-component'],
+    internalUrl: 'react-credit-card-component',
     url: 'https://react-credit-card-component.vercel.app/',
   },
   {
     title: 'URL Preview',
     description: '',
     images: ['url-preview'],
+    internalUrl: 'url-preview',
     url: 'https://url-preview-sepia.vercel.app/',
   },
   {
     title: 'React Weather App',
     description: '',
     images: ['react-weather-app'],
+    internalUrl: 'react-weather-app',
     url: 'https://react-weather-app-brown.now.sh/',
   },
   {
     title: 'MERN-Stack Project Management',
     description: '',
     images: ['mern-stack-project-management-login'],
+    internalUrl: 'mern-stack-project-management',
     url: 'https://mern-stack-project-management.vercel.app/',
   },
   {
     title: 'YouTube Downloader',
-    description: '',
+    description:
+      'A simple YouTube downloader without advertising, developed with React, Node.js and Axios.',
     images: ['youtube-downloader'],
+    internalUrl: 'youtube-downloader',
     url: 'https://youtubdle.com',
   },
 ];
@@ -38,9 +44,15 @@ const Projects = () => {
   return (
     <Box as="section" id="projects">
       <Heading mb="1em">My Projects</Heading>
-      {PROJECTS.map((project) => {
-        return <ProjectCard {...project} />;
-      })}
+      <Text mb="3em">
+        Lorem ipsum dolor sit atmet, lorem ipsum dolor sit atmet, lorem ipsum
+        dolor. Sit atmet, lorem ipsum.
+      </Text>
+      <SimpleGrid columns={[1, 1, 2]} spacing="40px">
+        {PROJECTS.map((project) => {
+          return <ProjectCard {...project} />;
+        })}
+      </SimpleGrid>
     </Box>
   );
 };
