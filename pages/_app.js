@@ -12,6 +12,11 @@ const theme = extendTheme({
         lineHeight: '185%',
         letterSpacing: '0.03em',
       },
+      a: {
+        _focus: {
+          boxShadow: 'none !important',
+        },
+      },
     }),
   },
 });
