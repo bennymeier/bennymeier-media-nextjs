@@ -1,11 +1,15 @@
 import Main from '../../components/Main/Main';
 import References from '../../components/References/References';
+import SEO from '../../components/SEO';
 
 const Index = () => {
   return (
-    <Main>
-      <References />
-    </Main>
+    <>
+      <SEO />
+      <Main>
+        <References />
+      </Main>
+    </>
   );
 };
 

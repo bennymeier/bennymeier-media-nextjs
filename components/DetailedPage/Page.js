@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/core';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
-import Navbar from '../Navbar/Navbar';
+import SEO from '../SEO';
 import Stack from '../Stack/Stack';
 
 /**
@@ -31,6 +31,7 @@ const Page = ({
 }) => {
   return (
     <>
+      <SEO title={title} />
       <Box className="container">
         <Heading mt="1em" mb="2em">
           {title}{' '}

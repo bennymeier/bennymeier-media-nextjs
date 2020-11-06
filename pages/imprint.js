@@ -8,10 +8,12 @@ import {
   UnorderedList,
   ListItem,
 } from '@chakra-ui/core';
+import SEO from '../components/SEO';
 
 const Imprint = () => {
   return (
     <>
+      <SEO title="Imprint" />
       <Box className="container">
         <Flex alignItems="center" flexDirection="column">
           <Heading as="h1" size="md">
@@ -21,7 +23,11 @@ const Imprint = () => {
             Schmalgasse 2a, <br />
             79258 Hartheim
           </Text>
-          <Link href="mailto:hi@bennymeier-media.de" isExternal aria-label="Get in touch with me!">
+          <Link
+            href="mailto:hi@bennymeier-media.de"
+            isExternal
+            aria-label="Get in touch with me!"
+          >
             hi@bennymeier-media.de
           </Link>
           <Divider mt="2em" mb="2em" />

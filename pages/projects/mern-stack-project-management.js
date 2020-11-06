@@ -72,7 +72,7 @@ const Project = () => {
       description={Description}
       title="MERN Stack Project Management"
       url={false}
-    />
+      />
   );
 };
 

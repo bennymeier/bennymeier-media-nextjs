@@ -1,11 +1,15 @@
 import Main from '../../components/Main/Main';
 import Projects from '../../components/Projects/Projects';
+import SEO from '../../components/SEO';
 
 const Index = () => {
   return (
-    <Main>
-      <Projects />
-    </Main>
+    <>
+      <SEO />
+      <Main>
+        <Projects />
+      </Main>
+    </>
   );
 };
 
