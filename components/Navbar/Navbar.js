@@ -16,7 +16,7 @@ import LayoutToggle from '../LayoutToggle/LayoutToggle';
 const MenuItems = ({ children, to }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
     <NextLink href={to} passHref>
-      <Link>{children}</Link>
+      <Link aria-label={`Go to ${children}`}>{children}</Link>
     </NextLink>
   </Text>
 );
@@ -28,8 +28,9 @@ const Logo = () => {
   const image = useColorModeValue('black', 'white');
   return (
     <NextLink href="/" passHref css={{ outline: 'none' }}>
-      <Link>
+      <Link aria-label="Go back to home">
         <Image
+          alt="My logo Meier"
           className="logo"
           src={`/img/logo_${image}.png`}
           unsized

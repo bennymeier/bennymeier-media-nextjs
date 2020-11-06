@@ -11,7 +11,9 @@ const Footer = () => {
   return (
     <Box as="footer" bg={bgColor}>
       <NextLink href="/imprint" passHref>
-        <Link color={color} fontWeight="bold">Imprint</Link>
+        <Link color={color} fontWeight="bold" aria-label="Open imprint">
+          Imprint
+        </Link>
       </NextLink>
       <Text color={color}>Copyright © 2016 - {year}</Text>
       <Divider width="5em" mt="1em" mb="1em" />

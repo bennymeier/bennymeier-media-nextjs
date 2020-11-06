@@ -24,7 +24,9 @@ const RefrenceCard = ({
     <Box maxWidth="600px">
       {!inProgress && (
         <NextLink href={`/references/${internalUrl}`} passHref>
-          <Link>{imageUrl && <Mockup imageUrl={imageUrl} />}</Link>
+          <Link aria-label={`See the details of ${title}`}>
+            {imageUrl && <Mockup imageUrl={imageUrl} />}
+          </Link>
         </NextLink>
       )}
       {inProgress && <Mockup imageUrl={imageUrl} />}
@@ -35,7 +37,11 @@ const RefrenceCard = ({
         <Text>{description}</Text>
         {!inProgress && (
           <NextLink href={`/references/${internalUrl}`} passHref>
-            <Link color={linkColor} fontWeight="bold">
+            <Link
+              color={linkColor}
+              fontWeight="bold"
+              aria-label={`See the details of ${title}`}
+            >
               View More
               <ChevronRightIcon />
             </Link>

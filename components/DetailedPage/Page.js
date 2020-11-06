@@ -35,9 +35,14 @@ const Page = ({
         <Heading mt="1em" mb="2em">
           {title}{' '}
           {url && (
-            <Link href={url} isExternal title={`Open ${title} in a new tab`}>
+            <Link
+              href={url}
+              isExternal
+              title={`Open ${title} in a new tab`}
+              aria-label={`Open ${title} in a new tab`}
+            >
               <IconButton
-              variant="ghost"
+                variant="ghost"
                 icon={<ExternalLinkIcon />}
                 aria-label="Open Website in new tab"
               />
@@ -60,6 +65,7 @@ const Page = ({
         {images.map((image) => {
           return (
             <Image
+              alt={`Website preview of ${title}`}
               src={`/img/${images}.png`}
               unsized
               key={image}

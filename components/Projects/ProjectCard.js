@@ -11,8 +11,9 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
       {images.map((image) => {
         return (
           <NextLink href={`/projects/${internalUrl}`} passHref key={image}>
-            <Link>
+            <Link aria-label={`Image preview of ${title}`}>
               <Image
+                alt={`Image preview of ${title}`}
                 key={image}
                 src={`/img/projects/${image}.png`}
                 unsized
@@ -28,7 +29,11 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
         </Heading>
         <Text>{description}</Text>
         <NextLink href={`/projects/${internalUrl}`} passHref>
-          <Link color={linkColor} fontWeight="bold">
+          <Link
+            color={linkColor}
+            fontWeight="bold"
+            aria-label={`See the details of ${title}`}
+          >
             View More
             <ChevronRightIcon />
           </Link>

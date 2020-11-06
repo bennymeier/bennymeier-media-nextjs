@@ -45,8 +45,19 @@ const SocialMedia = () => {
       <Flex>
         {SOCIAL_MEDIA.map((media) => {
           return (
-            <Link key={media.url} href={media.url} isExternal margin="0 10px">
-              <IconButton fill={fillColor}>{media.icon}</IconButton>
+            <Link
+              key={media.url}
+              href={media.url}
+              isExternal
+              margin="0 10px"
+              aria-label={`Go to my ${media.name} profile`}
+            >
+              <IconButton
+                fill={fillColor}
+                aria-label={`Open my ${media.name} profile`}
+              >
+                {media.icon}
+              </IconButton>
             </Link>
           );
         })}

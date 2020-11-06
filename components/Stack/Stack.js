@@ -56,7 +56,7 @@ const CodeStack = ({ url }) => {
   }
   return (
     <ListItem>
-      <Link isExternal href={url}>
+      <Link isExternal href={url} aria-label="View repository">
         View Repository
       </Link>
     </ListItem>

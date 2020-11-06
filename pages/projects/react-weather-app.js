@@ -11,7 +11,11 @@ const Description = () => {
       <Text mt="1em">
         To locate the user and get to his coordinates I used the Geolocation
         API. To get the current weather, I used the {/* */}
-        <Link href="https://openweathermap.org/api" isExternal>
+        <Link
+          href="https://openweathermap.org/api"
+          isExternal
+          aria-label="Open the Open Weather Map API"
+        >
           Open Weather Map API
         </Link>
         , which gives me a 5 day preview.

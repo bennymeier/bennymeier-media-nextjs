@@ -11,8 +11,9 @@ const Logo = () => {
   const image = useColorModeValue('black', 'white');
   return (
     <NextLink href="/" passHref css={{ outline: 'none' }}>
-      <Link>
+      <Link aria-label="Go to home">
         <Image
+          alt="My logo Meier"
           className="logo"
           src={`/img/logo_${image}.png`}
           unsized

@@ -21,7 +21,7 @@ const Imprint = () => {
             Schmalgasse 2a, <br />
             79258 Hartheim
           </Text>
-          <Link href="mailto:hi@bennymeier-media.de">
+          <Link href="mailto:hi@bennymeier-media.de" isExternal aria-label="Get in touch with me!">
             hi@bennymeier-media.de
           </Link>
           <Divider mt="2em" mb="2em" />
