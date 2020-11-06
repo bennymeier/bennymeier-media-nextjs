@@ -1,10 +1,10 @@
 .sticky-navbar {
   position: sticky;
-  height: 50px;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 14px;
-  z-index: 1;
+  z-index: 3;
+  outline: none;
 }

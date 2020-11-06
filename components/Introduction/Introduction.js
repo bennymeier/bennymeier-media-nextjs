@@ -3,7 +3,7 @@ import Me from '../Me/Me';
 
 const Introduction = () => {
   return (
-    <Box className="section" as="section" id="introduction">
+    <Box className="section" as="section" id="about">
       <Heading className="heading">
         Hi there, I’m Benny.
         <br />
