@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -13,10 +17,6 @@ a {
 
 .round {
   border-radius: 4px;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .container,
@@ -53,4 +53,9 @@ a {
 
 .logo {
   max-width: 65px;
+}
+
+footer {
+  display: flex;
+  padding: 3em 2em;
 }
