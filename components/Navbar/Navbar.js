@@ -118,7 +118,7 @@ const Navbar = () => {
         >
           {MENU_ENTRIES.map((entry) => {
             return (
-              <MenuItems to={entry.to} key={to} onClick={() => setShow(false)}>
+              <MenuItems to={entry.to} key={entry.to} onClick={() => setShow(false)}>
                 {entry.name}
               </MenuItems>
             );
