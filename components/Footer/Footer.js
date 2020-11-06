@@ -15,7 +15,7 @@ const Footer = () => {
       </NextLink>
       <Text color={color}>Copyright © 2016 - {year}</Text>
       <Divider width="5em" mt="1em" mb="1em" />
-      <Text>
+      <Text color={color}>
         Made with Next.js <Heart className="rotate" color="red.400" />
       </Text>
     </Box>
