@@ -48,6 +48,7 @@ const Navbar = () => {
   const handleToggle = () => setShow(!show);
   const bg = useColorModeValue('white', 'gray.800');
   const borderColor = useColorModeValue('#EDF2F7', '#2D3748');
+
   useEffect(() => {
     if (show) {
       document.body.style.overflow = 'hidden';
@@ -80,7 +81,6 @@ const Navbar = () => {
         padding="0.5rem"
         borderBottom={`1px solid ${borderColor}`}
         borderTop="3px solid #319795"
-        height={show ? '' : '50px'}
         className={styles['sticky-navbar']}
       >
         <Flex align="center" mr={5}>
