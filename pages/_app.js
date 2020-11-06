@@ -1,5 +1,7 @@
 import '../styles/globals.css';
 import { ChakraProvider, extendTheme } from '@chakra-ui/core';
+import Navbar from '../components/Navbar/Navbar';
+import Footer from '../components/Footer/Footer';
 
 /**
  * Custom theme
@@ -24,7 +26,9 @@ const theme = extendTheme({
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>
+      <Navbar />
       <Component {...pageProps} />
+      <Footer />
     </ChakraProvider>
   );
 }

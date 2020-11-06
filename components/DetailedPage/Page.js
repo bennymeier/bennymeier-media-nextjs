@@ -31,7 +31,6 @@ const Page = ({
 }) => {
   return (
     <>
-      <Navbar />
       <Box className="container">
         <Heading mt="1em" mb="2em">
           {title}{' '}

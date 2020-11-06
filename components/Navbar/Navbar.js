@@ -88,7 +88,7 @@ const Navbar = () => {
         </Flex>
 
         <Box
-          display={{ sm: 'block', md: 'none' }}
+          display={{ base: 'block', md: 'none' }}
           onClick={handleToggle}
           mr={show ? '17px' : ''}
         >
@@ -99,8 +99,8 @@ const Navbar = () => {
         </Box>
 
         <Box
-          display={{ sm: show ? 'block' : 'none', md: 'flex' }}
-          width={{ sm: 'full', md: 'auto' }}
+          display={{ base: show ? 'block' : 'none', md: 'flex' }}
+          width={{ base: 'full', md: 'auto' }}
           alignItems="center"
           flexGrow={1}
         >
@@ -111,7 +111,7 @@ const Navbar = () => {
         </Box>
 
         <Box
-          display={{ sm: show ? 'block' : 'none', md: 'block' }}
+          display={{ base: show ? 'block' : 'none', md: 'block' }}
           mt={{ base: 4, md: 0 }}
         >
           <Box>

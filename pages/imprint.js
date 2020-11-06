@@ -8,12 +8,10 @@ import {
   UnorderedList,
   ListItem,
 } from '@chakra-ui/core';
-import Navbar from '../components/Navbar/Navbar';
 
 const Imprint = () => {
   return (
     <>
-      <Navbar />
       <Box className="container">
         <Flex alignItems="center" flexDirection="column">
           <Heading as="h1" size="md">
