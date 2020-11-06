@@ -41,7 +41,9 @@ const Home = () => {
           content="Benny Meier is a fullstack developer from Freiburg, Germany. He loves web design and web development. He is an enthusiast of React, TypeScript, Node.js and MongoDB."
         />
         <meta name="twitter:image" content="" />
+        <link rel="canonical" href="https://bennymeier-media.de" />
 
+        <meta name="theme-color" content="#38b2ac"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />

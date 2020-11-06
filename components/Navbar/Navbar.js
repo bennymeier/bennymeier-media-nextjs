@@ -33,7 +33,8 @@ const Logo = () => {
           alt="My logo Meier"
           className="logo"
           src={`/img/logo_${image}.png`}
-          unsized
+          width={65}
+          height={22}
           key={image}
         />
       </Link>
