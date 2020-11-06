@@ -13,8 +13,18 @@ import Image from 'next/image';
 import styles from './NavbarSmall.module.css';
 import LayoutToggle from '../LayoutToggle/LayoutToggle';
 
-const MenuItems = ({ children, to }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
+const MENU_ENTRIES = [
+  { name: 'About', to: '/about' },
+  { name: 'Projects', to: '/projects' },
+  { name: 'References', to: '/references' },
+  {
+    name: 'Contact',
+    to: '/contact',
+  },
+];
+
+const MenuItems = ({ children, to, onClick }) => (
+  <Text mt={{ base: 4, md: 0 }} mr={6} display="block" onClick={onClick}>
     <NextLink href={to} passHref>
       <Link aria-label={`Go to ${children}`}>{children}</Link>
     </NextLink>
@@ -106,10 +116,13 @@ const Navbar = () => {
           alignItems="center"
           flexGrow={1}
         >
-          <MenuItems to="/about">About</MenuItems>
-          <MenuItems to="/projects">Projects</MenuItems>
-          <MenuItems to="/references">References</MenuItems>
-          <MenuItems to="/contact">Contact</MenuItems>
+          {MENU_ENTRIES.map((entry) => {
+            return (
+              <MenuItems to={entry.to} onClick={() => setShow(false)}>
+                {entry.name}
+              </MenuItems>
+            );
+          })}
         </Box>
 
         <Box
