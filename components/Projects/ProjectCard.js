@@ -28,7 +28,7 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
         </Heading>
         <Text>{description}</Text>
         <NextLink href={`/projects/${internalUrl}`} passHref>
-          <Link color={linkColor}>
+          <Link color={linkColor} fontWeight="bold">
             View More
             <ChevronRightIcon />
           </Link>

@@ -21,10 +21,10 @@ const STACKS = [
     id: 'Code',
     property: 'code',
   },
-  {
-    id: 'Live',
-    property: 'live',
-  },
+  // {
+  //   id: 'Live',
+  //   property: 'live',
+  // },
 ];
 
 const TypeStack = ({ type = 'Personal' }) => {
@@ -78,7 +78,7 @@ const Stack = (props) => {
               <UnorderedList styleType="none">
                 {property === 'type' && <TypeStack type={data} />}
                 {property === 'stack' && <TechStack technologies={data} />}
-                {property === 'live' && <LiveStack url={data} />}
+                {/* {property === 'live' && <LiveStack url={data} />} */}
                 {property === 'code' && <CodeStack url={data} />}
               </UnorderedList>
             </Flex>

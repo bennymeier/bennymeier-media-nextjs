@@ -35,8 +35,8 @@ const RefrenceCard = ({
         <Text>{description}</Text>
         {!inProgress && (
           <NextLink href={`/references/${internalUrl}`} passHref>
-            <Link color={linkColor}>
-              View Project
+            <Link color={linkColor} fontWeight="bold">
+              View More
               <ChevronRightIcon />
             </Link>
           </NextLink>

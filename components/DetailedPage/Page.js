@@ -1,4 +1,13 @@
-import { Box, Heading, Text, Badge, Alert, AlertIcon } from '@chakra-ui/core';
+import {
+  Box,
+  Heading,
+  Text,
+  Alert,
+  AlertIcon,
+  IconButton,
+  Link,
+} from '@chakra-ui/core';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import NavbarSmall from '../Navbar/NavbarSmall';
 import Stack from '../Stack/Stack';
@@ -25,7 +34,16 @@ const Page = ({
       <NavbarSmall />
       <Box className="container">
         <Heading mt="1em" mb="2em">
-          {title}
+          {title}{' '}
+          {url && (
+            <Link href={url} isExternal title={`Open ${title} in a new tab`}>
+              <IconButton
+              variant="ghost"
+                icon={<ExternalLinkIcon />}
+                aria-label="Open Website in new tab"
+              />
+            </Link>
+          )}
         </Heading>
         {!Desc && (
           <Alert status="warning" mb="1em">
