@@ -7,7 +7,7 @@ const Introduction = () => {
       <Heading className="heading">
         Hi there, I’m Benny.
         <br />
-        <Text as="span" color="teal.300">
+        <Text as="span" color="teal.400">
           Frontend Developer
         </Text>
         <Text lineHeight="initial">and working at United Planet.</Text>
