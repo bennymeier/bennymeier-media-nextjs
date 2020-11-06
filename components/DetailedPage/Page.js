@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/core';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
-import NavbarSmall from '../Navbar/NavbarSmall';
+import Navbar from '../Navbar/Navbar';
 import Stack from '../Stack/Stack';
 
 /**
@@ -31,7 +31,7 @@ const Page = ({
 }) => {
   return (
     <>
-      <NavbarSmall />
+      <Navbar />
       <Box className="container">
         <Heading mt="1em" mb="2em">
           {title}{' '}

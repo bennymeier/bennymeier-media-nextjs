@@ -1,4 +1,4 @@
-const {
+import {
   Box,
   Heading,
   Text,
@@ -7,13 +7,13 @@ const {
   Divider,
   UnorderedList,
   ListItem,
-} = require('@chakra-ui/core');
-import NavbarSmall from '../components/Navbar/NavbarSmall';
+} from '@chakra-ui/core';
+import Navbar from '../components/Navbar/Navbar';
 
 const Imprint = () => {
   return (
     <>
-      <NavbarSmall />
+      <Navbar />
       <Box className="container">
         <Flex alignItems="center" flexDirection="column">
           <Heading as="h1" size="md">
