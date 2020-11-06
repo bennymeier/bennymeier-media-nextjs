@@ -51,11 +51,22 @@ a {
   transform: scale(1.03);
 }
 
+.rotate {
+  transition-duration: 0.3s;
+}
+
+.rotate:hover {
+  transform: rotate(30deg);
+}
+
 .logo {
   max-width: 65px;
 }
 
 footer {
   display: flex;
-  padding: 3em 2em;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em 2em;
 }

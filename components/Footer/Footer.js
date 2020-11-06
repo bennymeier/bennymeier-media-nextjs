@@ -1,12 +1,23 @@
-import { Box, Link } from '@chakra-ui/core';
+import { Box, Link, useColorModeValue, Text, Divider } from '@chakra-ui/core';
 import NextLink from 'next/link';
+import Heart from '../Icons/Heart';
 
 const Footer = () => {
+  const bgColor = useColorModeValue('gray.700', 'teal.600');
+  const color = useColorModeValue('gray.300', '');
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
-    <Box as="footer">
+    <Box as="footer" bg={bgColor}>
       <NextLink href="/imprint" passHref>
-        <Link>Imprint</Link>
+        <Link color={color} fontWeight="bold">Imprint</Link>
       </NextLink>
+      <Text color={color}>Copyright © 2016 - {year}</Text>
+      <Divider width="5em" mt="1em" mb="1em" />
+      <Text>
+        Made with Next.js <Heart className="rotate" color="red.400" />
+      </Text>
     </Box>
   );
 };
