@@ -1,7 +1,7 @@
 import styles from './NavbarSmall.module.css';
 import Image from 'next/image';
 import LayoutToggle from '../LayoutToggle/LayoutToggle';
-import { Box, Link, useColorModeValue } from '@chakra-ui/core';
+import { Box, Link, useColorModeValue } from '@chakra-ui/react';
 import NextLink from 'next/link';
 
 /**
@@ -16,7 +16,7 @@ const Logo = () => {
           alt="My logo Meier"
           className="logo"
           src={`/img/logo_${image}.png`}
-          unsized
+          layout="fill"
           key={image}
         />
       </Link>

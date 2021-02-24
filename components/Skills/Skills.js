@@ -6,7 +6,7 @@ import {
   ListItem,
   Flex,
   useColorModeValue,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import Skill from './Skill';
 
 const GOOD_SKILLS = [

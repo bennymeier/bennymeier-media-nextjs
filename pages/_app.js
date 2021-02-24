@@ -1,5 +1,5 @@
 import '../styles/globals.css';
-import { ChakraProvider, extendTheme } from '@chakra-ui/core';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 

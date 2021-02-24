@@ -6,7 +6,7 @@ import {
   AlertIcon,
   IconButton,
   Link,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import SEO from '../SEO';
@@ -68,7 +68,7 @@ const Page = ({
             <Image
               alt={`Website preview of ${title}`}
               src={`/img/${images}.png`}
-              unsized
+              layout="fill"
               key={image}
               className="round"
             />

@@ -1,4 +1,4 @@
-import { Box, Link, useColorModeValue, Text, Divider } from '@chakra-ui/core';
+import { Box, Link, useColorModeValue, Text, Divider } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import Heart from '../Icons/Heart';
 

@@ -1,6 +1,6 @@
 import styles from './Mockup.module.css';
 import Image from 'next/image';
-import { Box } from '@chakra-ui/core';
+import { Box } from '@chakra-ui/react';
 
 const Mockup = ({ imageUrl }) => {
   return (
@@ -10,7 +10,7 @@ const Mockup = ({ imageUrl }) => {
     >
       <Image
         src={`/img/references/${imageUrl}.png`}
-        unsized
+        layout="fill"
         alt={`Mockup image of the website`}
       />
     </Box>

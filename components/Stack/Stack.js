@@ -6,7 +6,7 @@ import {
   Link,
   Box,
   Badge,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 const STACKS = [
   {

@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/core';
+import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import ProjectCard from './ProjectCard';
 
 const PROJECTS = [

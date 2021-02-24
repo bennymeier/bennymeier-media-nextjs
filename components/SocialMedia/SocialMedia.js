@@ -7,7 +7,7 @@ import {
   Link,
   useColorModeValue,
   Box,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 
 const SOCIAL_MEDIA = [
   {

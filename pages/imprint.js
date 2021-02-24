@@ -7,7 +7,7 @@ import {
   Divider,
   UnorderedList,
   ListItem,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import SEO from '../components/SEO';
 
 const Imprint = () => {

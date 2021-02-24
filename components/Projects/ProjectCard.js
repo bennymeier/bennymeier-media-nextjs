@@ -1,4 +1,4 @@
-import { Box, Heading, Link, Text, useColorModeValue } from '@chakra-ui/core';
+import { Box, Heading, Link, Text, useColorModeValue } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import Image from 'next/image';
 import NextLink from 'next/link';
@@ -16,7 +16,7 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
                 alt={`Image preview of ${title}`}
                 key={image}
                 src={`/img/projects/${image}.png`}
-                unsized
+                layout="fill"
                 className="zoom-in round"
               />
             </Link>

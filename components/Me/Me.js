@@ -7,7 +7,9 @@ const Me = () => {
       alt="A photo of me"
       className={`${styles.photo} round`}
       src="/img/about_me_smaller.png"
-      unsized
+      layout="responsive"
+      width={400}
+      height={100}
     />
   );
 };

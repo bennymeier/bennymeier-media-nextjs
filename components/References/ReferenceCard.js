@@ -5,7 +5,7 @@ import {
   Box,
   useColorModeValue,
   Badge,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import Mockup from '../Mockup/Mockup';

@@ -1,4 +1,4 @@
-import { Box, Text, Link } from '@chakra-ui/core';
+import { Box, Text, Link } from '@chakra-ui/react';
 import Page from '../../components/DetailedPage/Page';
 
 const Description = () => {

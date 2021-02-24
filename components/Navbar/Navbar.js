@@ -6,7 +6,7 @@ import {
   IconButton,
   Link,
   useColorModeValue,
-} from '@chakra-ui/core';
+} from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import Image from 'next/image';
@@ -24,7 +24,13 @@ const MENU_ENTRIES = [
 ];
 
 const MenuItems = ({ children, to, onClick }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={6} display="block" onClick={onClick}>
+  <Text
+    mt={{ base: 4, md: 0 }}
+    mr={6}
+    fontWeight="bold"
+    display="block"
+    onClick={onClick}
+  >
     <NextLink href={to} passHref>
       <Link aria-label={`Go to ${children}`}>{children}</Link>
     </NextLink>
@@ -60,6 +66,17 @@ const Navbar = () => {
   const handleToggle = () => setShow(!show);
   const bg = useColorModeValue('white', 'gray.800');
   const borderColor = useColorModeValue('#EDF2F7', '#2D3748');
+
+  const resize = () => {
+    if (window.innerWidth > 768) {
+      setShow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', resize);
+    return () => window.removeEventListener('resize', resize);
+  }, []);
 
   useEffect(() => {
     if (show) {
@@ -111,14 +128,19 @@ const Navbar = () => {
         </Box>
 
         <Box
-          display={{ base: show ? 'block' : 'none', md: 'flex' }}
+          display={{ base: show ? 'flex' : 'none', md: 'flex' }}
           width={{ base: 'full', md: 'auto' }}
-          alignItems="center"
+          alignItems={`${show ? 'flex-end' : ''}`}
+          flexDirection={`${show ? 'column' : ''}`}
           flexGrow={1}
         >
           {MENU_ENTRIES.map((entry) => {
             return (
-              <MenuItems to={entry.to} key={entry.to} onClick={() => setShow(false)}>
+              <MenuItems
+                to={entry.to}
+                key={entry.to}
+                onClick={() => setShow(false)}
+              >
                 {entry.name}
               </MenuItems>
             );
