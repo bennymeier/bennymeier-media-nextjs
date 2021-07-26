@@ -14,6 +14,7 @@ import styles from './NavbarSmall.module.css';
 import LayoutToggle from '../LayoutToggle/LayoutToggle';
 
 const MENU_ENTRIES = [
+  { name: 'Home', to: '/' },
   { name: 'About', to: '/about' },
   { name: 'Projects', to: '/projects' },
   { name: 'References', to: '/references' },

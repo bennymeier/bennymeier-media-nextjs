@@ -1,4 +1,4 @@
-import { ListItem, UnorderedList, Box, Text, Spacer } from '@chakra-ui/react';
+import { Box, Text, Spacer } from '@chakra-ui/react';
 import Page from '../../components/DetailedPage/Page';
 
 const Description = () => {

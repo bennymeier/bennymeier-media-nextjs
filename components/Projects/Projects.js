@@ -1,45 +1,45 @@
-import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
-import ProjectCard from './ProjectCard';
+import { Box, Heading, SimpleGrid, Text } from "@chakra-ui/react";
+import ProjectCard from "./ProjectCard";
 
 const PROJECTS = [
   {
-    title: 'React Credit Card Component',
-    description: 'I built a simple React Credit Card Component out of boredom.',
-    images: ['react-credit-card-component'],
-    internalUrl: 'react-credit-card-component',
-    url: 'https://react-credit-card-component.vercel.app/',
+    title: "React Credit Card Component",
+    description: "I built a simple React Credit Card Component out of boredom.",
+    images: ["react-credit-card-component"],
+    internalUrl: "react-credit-card-component",
+    url: "https://react-credit-card-component.vercel.app/",
   },
   {
-    title: 'URL Preview',
+    title: "URL Preview",
     description:
-      'Must have on every Social Media Platform. It collects informationen about a website like title, description and image. This gives the user a preview of a website before they click.',
-    images: ['url-preview'],
-    internalUrl: 'url-preview',
-    url: 'https://url-preview-sepia.vercel.app/',
+      "Must have on every Social Media Platform. It collects informationen about a website like title, description and image. This gives the user a preview of a website before they click.",
+    images: ["url-preview"],
+    internalUrl: "url-preview",
+    url: "https://url-preview-sepia.vercel.app/",
   },
   {
-    title: 'React Weather App',
+    title: "React Weather App",
     description:
-      'A small React Weather App built with the Open Weather Map API.',
-    images: ['react-weather-app'],
-    internalUrl: 'react-weather-app',
-    url: 'https://react-weather-app-brown.now.sh/',
+      "A small React Weather App built with the Open Weather Map API.",
+    images: ["react-weather-app"],
+    internalUrl: "react-weather-app",
+    url: "https://react-weather-app-brown.now.sh/",
   },
   {
-    title: 'MERN-Stack Project Management',
+    title: "MERN-Stack Project Management",
     description:
-      'A Jira Clone with many functions lile creating, reading, updating and deleting users, tasks and much more. It comes with handy drag & drop.',
-    images: ['mern-stack-project-management-login'],
-    internalUrl: 'mern-stack-project-management',
-    url: 'https://mern-stack-project-management.vercel.app/',
+      "A Jira Clone with many functions lile creating, reading, updating and deleting users, tasks and much more. It comes with handy drag & drop.",
+    images: ["mern-stack-project-management-login"],
+    internalUrl: "mern-stack-project-management",
+    url: "https://mern-stack-project-management.vercel.app/",
   },
   {
-    title: 'YouTube Downloader',
+    title: "YouTube Downloader",
     description:
-      'A simple YouTube downloader without advertising, developed with React, Node.js and Axios.',
-    images: ['youtube-downloader'],
-    internalUrl: 'youtube-downloader',
-    url: 'https://youtubdle.com',
+      "A simple YouTube downloader without advertising, developed with React, Node.js and Axios.",
+    images: ["youtube-downloader"],
+    internalUrl: "youtube-downloader",
+    url: "https://youtubdle.com",
   },
 ];
 

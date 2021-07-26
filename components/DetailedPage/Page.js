@@ -6,11 +6,11 @@ import {
   AlertIcon,
   IconButton,
   Link,
-} from "@chakra-ui/react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import Image from "next/image";
-import SEO from "../SEO";
-import Stack from "../Stack/Stack";
+} from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+import Image from 'next/image';
+import SEO from '../SEO';
+import Stack from '../Stack/Stack';
 
 /**
  * @description Renders a component for the references
@@ -34,7 +34,7 @@ const Page = ({
       <SEO title={title} />
       <Box className="container">
         <Heading mt="1em" mb="2em">
-          {title}{" "}
+          {title}{' '}
           {url && (
             <Link
               href={url}
@@ -56,21 +56,20 @@ const Page = ({
             Description coming soon!
           </Alert>
         )}
-        {typeof description === "string" && (
+        {typeof description === 'string' && (
           <Text mt="2em" mb="2em">
             {Desc}
           </Text>
         )}
-        {typeof Desc === "function" && <Desc />}
+        {typeof Desc === 'function' && <Desc />}
         <Stack type={type} stack={stack} live={url} code={githubUrl} />
         {images.map((image) => {
           return (
-            <Box className="img-container">
+            <Box className="img-container" key={image}>
               <Image
                 alt={`Website preview of ${title}`}
                 src={`/img/${images}.png`}
                 layout="fill"
-                key={image}
                 className="round"
               />
             </Box>
