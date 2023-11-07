@@ -4,11 +4,10 @@ import {
   Flex,
   Text,
   IconButton,
-  Link,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import NextLink from 'next/link';
 import Image from 'next/image';
 import styles from './NavbarSmall.module.css';
 import LayoutToggle from '../LayoutToggle/LayoutToggle';
@@ -32,9 +31,9 @@ const MenuItems = ({ children, to, onClick }) => (
     display="block"
     onClick={onClick}
   >
-    <NextLink href={to} passHref>
-      <Link aria-label={`Go to ${children}`}>{children}</Link>
-    </NextLink>
+    <Link href={to} passHref aria-label={`Go to ${children}`}>
+      {children}
+    </Link>
   </Text>
 );
 
@@ -44,18 +43,16 @@ const MenuItems = ({ children, to, onClick }) => (
 const Logo = () => {
   const image = useColorModeValue('black', 'white');
   return (
-    <NextLink href="/" passHref css={{ outline: 'none' }}>
-      <Link aria-label="Go back to home">
-        <Image
-          alt="My logo Meier"
-          className="logo"
-          src={`/img/logo_${image}.png`}
-          width={65}
-          height={22}
-          key={image}
-        />
-      </Link>
-    </NextLink>
+    <Link aria-label="Go back to home" href="/" css={{ outline: 'none' }}>
+      <Image
+        alt="My logo Meier"
+        className="logo"
+        src={`/img/logo_${image}.png`}
+        width={65}
+        height={22}
+        key={image}
+      />
+    </Link>
   );
 };
 

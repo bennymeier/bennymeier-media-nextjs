@@ -4,10 +4,9 @@ import styles from './Me.module.css';
 const Me = () => {
   return (
     <Image
-      alt="A photo of me"
+      alt="Picture of Benny Meier"
       className={`${styles.photo} round`}
       src="/img/about_me_smaller.png"
-      layout="responsive"
       width={400}
       height={100}
     />

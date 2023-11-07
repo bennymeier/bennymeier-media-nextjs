@@ -1,5 +1,5 @@
-import { Box, Link, useColorModeValue, Text, Divider } from '@chakra-ui/react';
-import NextLink from 'next/link';
+import { Box, useColorModeValue, Text, Divider } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
 import Heart from '../Icons/Heart';
 
 const Footer = () => {
@@ -10,11 +10,14 @@ const Footer = () => {
 
   return (
     <Box as="footer" bg={bgColor}>
-      <NextLink href="/imprint" passHref>
-        <Link color={color} fontWeight="bold" aria-label="Open imprint">
-          Imprint
-        </Link>
-      </NextLink>
+      <Link
+        color={color}
+        fontWeight="bold"
+        href="/imprint"
+        aria-label="Open imprint"
+      >
+        Imprint
+      </Link>
       <Text color={color}>Copyright © 2016 - {year}</Text>
       <Divider width="5em" mt="1em" mb="1em" />
       <Text color={color}>

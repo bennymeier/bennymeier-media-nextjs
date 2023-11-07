@@ -1,13 +1,8 @@
 import LinkedinIcon from '../Icons/Linkedin';
 import GithubIcon from '../Icons/Github';
 import InstagramIcon from '../Icons/Instagram';
-import {
-  Flex,
-  IconButton,
-  Link,
-  useColorModeValue,
-  Box,
-} from '@chakra-ui/react';
+import { Flex, IconButton, useColorModeValue, Box } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
 
 const SOCIAL_MEDIA = [
   {
@@ -46,15 +41,15 @@ const SocialMedia = () => {
         {SOCIAL_MEDIA.map((media) => {
           return (
             <Link
-              key={media.url}
+              aria-label={`Go to my ${media.name} profile`}
               href={media.url}
               isExternal
               margin="0 10px"
-              aria-label={`Go to my ${media.name} profile`}
+              key={media.url}
             >
               <IconButton
-                fill={fillColor}
                 aria-label={`Open my ${media.name} profile`}
+                fill={fillColor}
               >
                 {media.icon}
               </IconButton>

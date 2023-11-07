@@ -1,26 +1,24 @@
 import styles from './NavbarSmall.module.css';
 import Image from 'next/image';
 import LayoutToggle from '../LayoutToggle/LayoutToggle';
-import { Box, Link, useColorModeValue } from '@chakra-ui/react';
-import NextLink from 'next/link';
+import { Box, useColorModeValue } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
 
 /**
- * @todo Add white_logo with full sizes cuz toggling mode changes height of logo
+ * @todo Add white_logo with full sizes because toggling mode changes height of logo
  */
 const Logo = () => {
   const image = useColorModeValue('black', 'white');
   return (
-    <NextLink href="/" passHref css={{ outline: 'none' }}>
-      <Link aria-label="Go to home">
-        <Image
-          alt="My logo Meier"
-          className="logo"
-          src={`/img/logo_${image}.png`}
-          layout="fill"
-          key={image}
-        />
-      </Link>
-    </NextLink>
+    <Link href="/" aria-label="Go to home" css={{ outline: 'none' }}>
+      <Image
+        alt="My logo Meier"
+        className="logo"
+        src={`/img/logo_${image}.png`}
+        layout="fill"
+        key={image}
+      />
+    </Link>
   );
 };
 

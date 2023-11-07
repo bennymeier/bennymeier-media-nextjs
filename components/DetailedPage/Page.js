@@ -5,9 +5,9 @@ import {
   Alert,
   AlertIcon,
   IconButton,
-  Link,
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import { Link } from '@chakra-ui/next-js';
 import Image from 'next/image';
 import SEO from '../SEO';
 import Stack from '../Stack/Stack';
@@ -31,16 +31,16 @@ const Page = ({
 }) => {
   return (
     <>
-      <SEO title={title} />
+      <SEO />
       <Box className="container">
         <Heading mt="1em" mb="2em">
           {title}{' '}
           {url && (
             <Link
+              aria-label={`Open ${title} in a new tab`}
               href={url}
               isExternal
               title={`Open ${title} in a new tab`}
-              aria-label={`Open ${title} in a new tab`}
             >
               <IconButton
                 variant="ghost"

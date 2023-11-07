@@ -3,10 +3,10 @@ import {
   UnorderedList,
   ListItem,
   Heading,
-  Link,
   Box,
   Badge,
 } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
 
 const STACKS = [
   {

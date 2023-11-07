@@ -1,13 +1,6 @@
-import {
-  Heading,
-  Text,
-  Link,
-  Box,
-  useColorModeValue,
-  Badge,
-} from '@chakra-ui/react';
+import { Heading, Text, Box, useColorModeValue, Badge } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import NextLink from 'next/link';
 import Mockup from '../Mockup/Mockup';
 
 const RefrenceCard = ({
@@ -23,11 +16,12 @@ const RefrenceCard = ({
   return (
     <Box maxWidth="600px">
       {!inProgress && (
-        <NextLink href={`/references/${internalUrl}`} passHref>
-          <Link aria-label={`See the details of ${title}`}>
-            {imageUrl && <Mockup imageUrl={imageUrl} />}
-          </Link>
-        </NextLink>
+        <Link
+          aria-label={`See the details of ${title}`}
+          href={`/references/${internalUrl}`}
+        >
+          {imageUrl && <Mockup imageUrl={imageUrl} />}
+        </Link>
       )}
       {inProgress && <Mockup imageUrl={imageUrl} />}
       <Box mt="2em">
@@ -36,16 +30,15 @@ const RefrenceCard = ({
         </Heading>
         <Text>{description}</Text>
         {!inProgress && (
-          <NextLink href={`/references/${internalUrl}`} passHref>
-            <Link
-              color={linkColor}
-              fontWeight="bold"
-              aria-label={`See the details of ${title}`}
-            >
-              View More
-              <ChevronRightIcon />
-            </Link>
-          </NextLink>
+          <Link
+            aria-label={`See the details of ${title}`}
+            color={linkColor}
+            fontWeight="bold"
+            href={`/references/${internalUrl}`}
+          >
+            View More
+            <ChevronRightIcon />
+          </Link>
         )}
         {inProgress && <Badge>Coming soon</Badge>}
       </Box>

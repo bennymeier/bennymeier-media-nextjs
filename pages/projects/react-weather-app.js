@@ -1,4 +1,5 @@
-import { Box, Text, Link } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/next-js';
 import Page from '../../components/DetailedPage/Page';
 
 const Description = () => {
@@ -12,9 +13,9 @@ const Description = () => {
         To locate the user and get to his coordinates I used the Geolocation
         API. To get the current weather, I used the {/* */}
         <Link
+          aria-label="Open the Open Weather Map API"
           href="https://openweathermap.org/api"
           isExternal
-          aria-label="Open the Open Weather Map API"
         >
           Open Weather Map API
         </Link>

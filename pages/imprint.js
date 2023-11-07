@@ -2,18 +2,18 @@ import {
   Box,
   Heading,
   Text,
-  Link,
   Flex,
   Divider,
   UnorderedList,
   ListItem,
 } from '@chakra-ui/react';
 import SEO from '../components/SEO';
+import { Link } from '@chakra-ui/next-js';
 
 const Imprint = () => {
   return (
     <>
-      <SEO title="Imprint" />
+      <SEO />
       <Box className="container">
         <Flex alignItems="center" flexDirection="column">
           <Heading as="h1" size="md">

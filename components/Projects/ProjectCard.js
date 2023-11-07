@@ -1,28 +1,30 @@
-import { Box, Heading, Link, Text, useColorModeValue } from "@chakra-ui/react";
-import { ChevronRightIcon } from "@chakra-ui/icons";
-import Image from "next/image";
-import NextLink from "next/link";
+import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons';
+import Image from 'next/image';
+import { Link } from '@chakra-ui/next-js';
 
 const ProjectCard = ({ title, description, images, url, internalUrl }) => {
-  const linkColor = useColorModeValue("gray.800", "teal.300");
+  const linkColor = useColorModeValue('gray.800', 'teal.300');
 
   return (
     <Box maxWidth="600px">
       {images.map((image) => {
         return (
-          <NextLink href={`/projects/${internalUrl}`} passHref key={image}>
-            <Link aria-label={`Image preview of ${title}`}>
-              <Box className="img-container">
-                <Image
-                  alt={`Image preview of ${title}`}
-                  key={image}
-                  src={`/img/projects/${image}.png`}
-                  layout="fill"
-                  className="zoom-in round"
-                />
-              </Box>
-            </Link>
-          </NextLink>
+          <Link
+            aria-label={`Image preview of ${title}`}
+            href={`/projects/${internalUrl}`}
+            key={image}
+          >
+            <Box className="img-container">
+              <Image
+                alt={`Image preview of ${title}`}
+                key={image}
+                src={`/img/projects/${image}.png`}
+                layout="fill"
+                className="zoom-in round"
+              />
+            </Box>
+          </Link>
         );
       })}
       <Box mt="2em">
@@ -30,16 +32,15 @@ const ProjectCard = ({ title, description, images, url, internalUrl }) => {
           {title}
         </Heading>
         <Text>{description}</Text>
-        <NextLink href={`/projects/${internalUrl}`} passHref>
-          <Link
-            color={linkColor}
-            fontWeight="bold"
-            aria-label={`See the details of ${title}`}
-          >
-            View More
-            <ChevronRightIcon />
-          </Link>
-        </NextLink>
+        <Link
+          aria-label={`See the details of ${title}`}
+          color={linkColor}
+          fontWeight="bold"
+          href={`/projects/${internalUrl}`}
+        >
+          View More
+          <ChevronRightIcon />
+        </Link>
       </Box>
     </Box>
   );

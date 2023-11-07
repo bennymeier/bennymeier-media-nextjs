@@ -1,11 +1,9 @@
 import Head from 'next/head';
 
-const SEO = ({ title }) => {
+const SEO = () => {
   return (
     <Head lang="en">
-      <title>
-        {title && title + '-'} Benny Meier Media // Fullstack Developer
-      </title>
+      <title>Benny Meier Media // Fullstack Developer</title>
       <meta
         name="description"
         content="Benny Meier is a fullstack developer from Freiburg, Germany. He loves web design and web development. He is an enthusiast of React, TypeScript, Node.js and MongoDB."
