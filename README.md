@@ -1,7 +1,6 @@
-### My new personal portfolio made with Next.js v10 and React, deployed on Vercel.
+# My new personal portfolio made with Next.js v14, deployed on Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Install
+
+Install packages `yarn install`
+Start server `yarn dev`
