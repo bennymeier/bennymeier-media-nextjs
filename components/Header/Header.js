@@ -3,10 +3,8 @@ import SocialMedia from '../SocialMedia/SocialMedia';
 
 const Header = () => {
   return (
-    <Box as="header">
-      <Box className="container-social-media">
-        <SocialMedia />
-      </Box>
+    <Box as="header" mt="3">
+      <SocialMedia />
     </Box>
   );
 };

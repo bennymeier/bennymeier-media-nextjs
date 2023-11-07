@@ -1,3 +1,4 @@
+import Main from '../components/Main/Main';
 import {
   Box,
   Heading,
@@ -14,7 +15,7 @@ const Imprint = () => {
   return (
     <>
       <SEO />
-      <Box className="container">
+      <Main>
         <Flex alignItems="center" flexDirection="column">
           <Heading as="h1" size="md">
             Benjamin Meier
@@ -1339,7 +1340,7 @@ const Imprint = () => {
             </Text>
           </Box>
         </Flex>
-      </Box>
+      </Main>
     </>
   );
 };
