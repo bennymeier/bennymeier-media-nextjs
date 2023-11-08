@@ -1,4 +1,4 @@
-import { Heading, Text, SimpleGrid, Box } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import ReferenceCard from './ReferenceCard';
 
 const REFERENCES = [

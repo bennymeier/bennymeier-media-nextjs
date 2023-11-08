@@ -1,6 +1,7 @@
-import { Box, Text } from '@chakra-ui/react';
 import { Link } from '@chakra-ui/next-js';
+import { Box, Text } from '@chakra-ui/react';
 import Page from '../../components/DetailedPage/Page';
+import weatherPic from '/public/img/projects/react-weather-app.png';
 
 const Description = () => {
   return (
@@ -31,7 +32,7 @@ const Project = () => {
       githubUrl="https://github.com/bennymeier/react-weather-app"
       stack={['React', 'Open Weather Map API', 'Geolocation API']}
       type="Personal"
-      images={['projects/react-weather-app']}
+      images={[weatherPic]}
       description={Description}
       title="React Weather App"
       url="https://react-weather-app-brown.now.sh/"

@@ -1,12 +1,13 @@
-import {
-  Flex,
-  UnorderedList,
-  ListItem,
-  Heading,
-  Box,
-  Badge,
-} from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { Link } from '@chakra-ui/next-js';
+import {
+  Badge,
+  Box,
+  Flex,
+  Heading,
+  ListItem,
+  UnorderedList,
+} from '@chakra-ui/react';
 
 const STACKS = [
   {
@@ -33,7 +34,11 @@ const TypeStack = ({ type = 'Personal' }) => {
 
 const TechStack = ({ technologies = [] }) => {
   return technologies.map((technology) => {
-    return <ListItem key={technology}>{technology}</ListItem>;
+    return (
+      <ListItem key={technology}>
+        <Badge>{technology}</Badge>
+      </ListItem>
+    );
   });
 };
 
@@ -57,13 +62,13 @@ const CodeStack = ({ url }) => {
   return (
     <ListItem>
       <Link isExternal href={url} aria-label="View repository">
-        View Repository
+        View Repository <ExternalLinkIcon />
       </Link>
     </ListItem>
   );
 };
 
-const Stack = (props) => {
+const TechnologyStack = (props) => {
   return (
     <Box mb="2em">
       <Flex alignItems="baseline" justifyContent="space-around">
@@ -89,4 +94,4 @@ const Stack = (props) => {
   );
 };
 
-export default Stack;
+export default TechnologyStack;

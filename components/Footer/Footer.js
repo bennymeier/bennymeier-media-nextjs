@@ -1,16 +1,15 @@
 import {
   Box,
   Container,
+  Flex,
   SimpleGrid,
   Stack,
   Text,
-  Flex,
-  Heading,
   useColorModeValue,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import logoPic from '/public/img/logo_black.png';
 import Heart from '../Icons/Heart';
+import logoPic from '/public/img/logo_black.png';
 
 const ListHeader = ({ children }) => {
   return (

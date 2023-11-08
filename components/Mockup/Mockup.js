@@ -1,11 +1,11 @@
-import styles from "./Mockup.module.css";
-import Image from "next/image";
-import { Box } from "@chakra-ui/react";
+import { Box } from '@chakra-ui/react';
+import Image from 'next/image';
+import styles from './Mockup.module.css';
 
 const Mockup = ({ imageUrl }) => {
   return (
     <Box
-      className={`${styles["browser-mockup"]} ${styles["with-url"]} zoom-in img-container`}
+      className={`${styles['browser-mockup']} ${styles['with-url']} zoom-in img-container`}
       mb="1em"
     >
       <Image

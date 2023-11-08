@@ -1,7 +1,7 @@
-import '../styles/globals.css';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
+import Navbar from '../components/Navbar/Navbar';
+import '../styles/globals.css';
 
 /**
  * Custom theme

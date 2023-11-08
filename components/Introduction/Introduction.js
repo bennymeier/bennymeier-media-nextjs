@@ -1,4 +1,4 @@
-import { Heading, Text, Box, Tooltip } from '@chakra-ui/react';
+import { Box, Heading, Text, Tooltip } from '@chakra-ui/react';
 import { calculateAge } from '../../utils';
 import Me from '../Me/Me';
 

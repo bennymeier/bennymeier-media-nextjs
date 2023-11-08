@@ -1,10 +1,10 @@
 import {
-  Heading,
-  Text,
   Box,
-  UnorderedList,
-  ListItem,
   Flex,
+  Heading,
+  ListItem,
+  Text,
+  UnorderedList,
   useColorModeValue,
 } from '@chakra-ui/react';
 import Skill from './Skill';

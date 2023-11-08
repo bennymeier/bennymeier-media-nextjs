@@ -1,15 +1,15 @@
-import Main from '../components/Main/Main';
+import { Link } from '@chakra-ui/next-js';
 import {
   Box,
-  Heading,
-  Text,
-  Flex,
   Divider,
-  UnorderedList,
+  Flex,
+  Heading,
   ListItem,
+  Text,
+  UnorderedList,
 } from '@chakra-ui/react';
+import Main from '../components/Main/Main';
 import SEO from '../components/SEO';
-import { Link } from '@chakra-ui/next-js';
 
 const Imprint = () => {
   return (

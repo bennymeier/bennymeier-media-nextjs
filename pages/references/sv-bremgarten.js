@@ -1,11 +1,12 @@
 import Page from '../../components/DetailedPage/Page';
+import pic from '/public/img/references/sv-bremgarten_full.png';
 
 const Reference = () => {
   return (
     <Page
       stack={['Wordpress']}
       type="Voluntary"
-      images={['references/sv-bremgarten_full']}
+      images={[pic]}
       description=""
       title="SV Bremgarten e.V."
       url="https://sv-bremgarten.de"

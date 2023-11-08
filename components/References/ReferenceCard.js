@@ -1,6 +1,6 @@
-import { Heading, Text, Box, useColorModeValue, Badge } from '@chakra-ui/react';
-import { Link } from '@chakra-ui/next-js';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+import { Link } from '@chakra-ui/next-js';
+import { Badge, Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import Mockup from '../Mockup/Mockup';
 
 const RefrenceCard = ({

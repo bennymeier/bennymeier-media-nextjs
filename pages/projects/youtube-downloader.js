@@ -1,5 +1,6 @@
-import { ListItem, UnorderedList, Box, Text, Spacer } from '@chakra-ui/react';
+import { Box, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import Page from '../../components/DetailedPage/Page';
+import ytPic from '/public/img/projects/youtube-downloader.png';
 
 const Description = () => {
   return (
@@ -50,7 +51,7 @@ const Project = () => {
       githubUrl="https://github.com/bennymeier/youtube-downloader"
       stack={['React', 'Node.js', 'Axios']}
       type="Personal"
-      images={['projects/youtube-downloader']}
+      images={[ytPic]}
       description={Description}
       title="YouTube Downloader"
       url="https://youtubdle.com"

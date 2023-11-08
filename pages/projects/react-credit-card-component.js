@@ -1,5 +1,6 @@
-import { ListItem, UnorderedList, Box, Text, Spacer } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Page from '../../components/DetailedPage/Page';
+import creditCardPic from '/public/img/projects/react-credit-card-component.png';
 
 const Description = () => {
   return (
@@ -18,7 +19,7 @@ const Project = () => {
       githubUrl="https://github.com/bennymeier/react-credit-card-component"
       stack={['React', 'Sass']}
       type="Personal"
-      images={['projects/react-credit-card-component']}
+      images={[creditCardPic]}
       description={Description}
       title="React Credit Card Component"
       url="http://react-credit-card-component.vercel.app/"

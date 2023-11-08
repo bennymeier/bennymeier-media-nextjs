@@ -1,8 +1,8 @@
-import LinkedinIcon from '../Icons/Linkedin';
+import { Link } from '@chakra-ui/next-js';
+import { Box, Flex, IconButton, useColorModeValue } from '@chakra-ui/react';
 import GithubIcon from '../Icons/Github';
 import InstagramIcon from '../Icons/Instagram';
-import { Flex, IconButton, useColorModeValue, Box } from '@chakra-ui/react';
-import { Link } from '@chakra-ui/next-js';
+import LinkedinIcon from '../Icons/Linkedin';
 
 const SOCIAL_MEDIA = [
   {

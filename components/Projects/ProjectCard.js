@@ -1,7 +1,7 @@
-import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import Image from 'next/image';
 import { Link } from '@chakra-ui/next-js';
+import { Box, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import Image from 'next/image';
 
 const ProjectCard = ({ title, description, images, url, internalUrl }) => {
   const linkColor = useColorModeValue('gray.800', 'teal.300');

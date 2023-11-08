@@ -1,5 +1,6 @@
-import { Box, Text, Spacer } from '@chakra-ui/react';
+import { Box, Text } from '@chakra-ui/react';
 import Page from '../../components/DetailedPage/Page';
+import urlPic from '/public/img/projects/url-preview.png';
 
 const Description = () => {
   return (
@@ -29,7 +30,7 @@ const Project = () => {
       githubUrl="https://github.com/bennymeier/url-preview"
       stack={['React', 'Node.js', 'Express.js', 'Puppeteer']}
       type="Personal"
-      images={['projects/url-preview']}
+      images={[urlPic]}
       description={Description}
       title="URL Preview"
       url={false}

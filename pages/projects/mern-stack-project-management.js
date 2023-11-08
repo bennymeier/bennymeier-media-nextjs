@@ -1,5 +1,6 @@
-import { ListItem, UnorderedList, Box, Text } from '@chakra-ui/react';
+import { Box, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import Page from '../../components/DetailedPage/Page';
+import mernPic from '/public/img/projects/mern-stack-project-management-login.png';
 
 const Description = () => {
   return (
@@ -68,11 +69,11 @@ const Project = () => {
       ]}
       githubUrl="https://github.com/bennymeier/mern-stack-project-management"
       type="Personal"
-      images={['projects/mern-stack-project-management-login']}
+      images={[mernPic]}
       description={Description}
       title="MERN Stack Project Management"
       url={false}
-      />
+    />
   );
 };
 
