@@ -1,0 +1,33 @@
+/** KEYFRAMES */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.section:not(:first-child) {
+  margin: 5em 0 0 0;
+}
+
+.section:not(:first-child) .heading {
+  margin: 1em 0 0.5em 0;
+}
+
+.section:not(:first-child) .description {
+  margin: 0 0 1em 0;
+}
+
+.rotate {
+  animation: rotate 5s linear infinite;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5em 2em;
+}
