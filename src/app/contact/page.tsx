@@ -1,3 +1,5 @@
+'use client';
+
 import Main from '@/components/Main';
 import { EmailIcon, InfoIcon } from '@chakra-ui/icons';
 import {
