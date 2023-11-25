@@ -1,3 +1,5 @@
+'use client';
+
 import { PROJECTS } from '@/utils/constants';
 import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import ProjectCard from './ProjectCard';

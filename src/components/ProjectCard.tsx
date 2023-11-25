@@ -1,3 +1,4 @@
+import { Link } from '@chakra-ui/next-js';
 import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 import {
   IconBrandCss3,
@@ -19,20 +20,30 @@ const ProjectCard = ({ title, description, thumbnail, url, internalUrl }) => {
       position="relative"
     >
       <Box borderWidth="1px" borderRadius="0.5em" overflow="hidden">
-        <Image
-          alt={`Image preview of ${title}`}
-          className="zoom-in round"
-          height="650"
-          src={`/img/projects/${thumbnail}.png`}
-          width="1200"
-          loading="lazy"
-          quality={100}
-        />
+        <Link
+          aria-label={`Image preview of ${title}`}
+          href={`/projects/${internalUrl}`}
+        >
+          <Image
+            alt={`Image preview of ${title}`}
+            className="zoom-in round"
+            height="650"
+            src={`/img/projects/${thumbnail}.png`}
+            width="1200"
+            loading="lazy"
+            quality={100}
+          />
+        </Link>
       </Box>
       <Box py="4" px="2" flex="1 1 0%">
         <Box>
           <Heading as="h2" fontSize="x-large">
-            {title}
+            <Link
+              aria-label={`Image preview of ${title}`}
+              href={`/projects/${internalUrl}`}
+            >
+              {title}
+            </Link>
           </Heading>
           <Text>{description}</Text>
         </Box>

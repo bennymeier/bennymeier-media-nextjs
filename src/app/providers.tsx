@@ -1,11 +1,12 @@
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import '../styles/globals.css';
+'use client';
 
-/**
- * Custom theme
- */
+import { CacheProvider } from '@chakra-ui/next-js';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+
+type ProvidersProps = {
+  children: React.ReactNode;
+};
+
 const theme = extendTheme({
   styles: {
     global: (props) => ({
@@ -23,14 +24,14 @@ const theme = extendTheme({
   },
 });
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <ChakraProvider theme={theme}>
-      <Navbar />
-      <Component {...pageProps} />
-      <Footer />
-    </ChakraProvider>
-  );
-}
+const Providers = (props: ProvidersProps) => {
+  const { children } = props;
 
-export default MyApp;
+  return (
+    <CacheProvider>
+      <ChakraProvider theme={theme}>{children}</ChakraProvider>
+    </CacheProvider>
+  );
+};
+
+export default Providers;

@@ -1,3 +1,5 @@
+'use client';
+
 import Mockup from '@/components/Mockup';
 import { ChevronRightIcon } from '@chakra-ui/icons';
 import { Link } from '@chakra-ui/next-js';

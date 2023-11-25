@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Flex, Icon } from '@chakra-ui/react';
 
 const Skill = ({ name, icon }) => (

@@ -1,3 +1,5 @@
+'use client';
+
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { Link } from '@chakra-ui/next-js';
 import {
@@ -10,7 +12,6 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import Main from './Main';
-import Metadata from './Metadata';
 import TechnologyStack from './TechnologyStack';
 
 const DetailedPage = ({
@@ -20,11 +21,10 @@ const DetailedPage = ({
   url,
   images,
   type,
-  githubUrl,
+  githubUrl = '',
 }) => {
   return (
     <>
-      <Metadata />
       <Main>
         <Box className="container">
           <Heading mt="1em" mb="2em">

@@ -1,13 +1,11 @@
 import Main from '@/components/Main';
-import SEO from '@/components/Metadata';
-import Projects from '@/components/Projects';
+import References from '@/components/References';
 
 const Index = () => {
   return (
     <>
-      <SEO />
       <Main>
-        <Projects />
+        <References />
       </Main>
     </>
   );

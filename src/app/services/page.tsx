@@ -1,5 +1,6 @@
+'use client';
+
 import Main from '@/components/Main';
-import SEO from '@/components/Metadata';
 import Service from '@/components/Service';
 import { SERVICES } from '@/utils/constants';
 import { Box, SimpleGrid, Text } from '@chakra-ui/react';
@@ -7,7 +8,6 @@ import { Box, SimpleGrid, Text } from '@chakra-ui/react';
 const Services = () => {
   return (
     <>
-      <SEO />
       <Main>
         <Text>
           As a passionate web developer, I can help you kickstart your online

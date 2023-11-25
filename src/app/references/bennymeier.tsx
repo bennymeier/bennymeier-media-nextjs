@@ -1,8 +1,8 @@
-import Page from '@/components/DetailedPage';
+import DetailedPage from '@/components/DetailedPage';
 
 const Reference = () => {
   return (
-    <Page
+    <DetailedPage
       stack={['Koken CMS']}
       type="Personal"
       images={['img/references/bennymeier_full.png']}

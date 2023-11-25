@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
 import ReferenceCard from './ReferenceCard';
 

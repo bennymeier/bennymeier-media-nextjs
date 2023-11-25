@@ -1,8 +1,8 @@
-import Page from '@/components/DetailedPage';
+import DetailedPage from '@/components/DetailedPage';
 
 const Reference = () => {
   return (
-    <Page
+    <DetailedPage
       stack={['Bootstrap', 'jQuery']}
       type="Commercial"
       images={['img/references/johannaschnuepke_full.png']}

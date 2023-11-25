@@ -1,3 +1,5 @@
+'use client';
+
 import { Box, Heading, Text, Tooltip } from '@chakra-ui/react';
 import { calculateAge } from '../utils';
 import Me from './Me';

@@ -1,3 +1,5 @@
+'use client';
+
 import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Link } from '@chakra-ui/next-js';
 import {
@@ -10,7 +12,7 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
 import { MENU_ENTRIES } from 'src/utils/constants';
 import LayoutToggle from './LayoutToggle';
 
@@ -98,8 +100,8 @@ const DesktopNav = () => {
 };
 
 const DesktopNavItem = ({ name, href }) => {
-  const router = useRouter();
-  const isActive = router.pathname === href;
+  const pathname = usePathname();
+  const isActive = pathname === href;
 
   return (
     <Box>
@@ -141,8 +143,8 @@ const MobileNav = () => {
 };
 
 const MobileNavItem = ({ name, href }) => {
-  const router = useRouter();
-  const isActive = router.pathname === href;
+  const pathname = usePathname();
+  const isActive = pathname === href;
 
   return (
     <Stack spacing={4}>

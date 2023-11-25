@@ -1,3 +1,5 @@
+'use client';
+
 import { Button, Flex } from '@chakra-ui/react';
 
 const Contact = () => {

@@ -1,11 +1,11 @@
-import Page from '@/components/DetailedPage';
+import DetailedPage from '@/components/DetailedPage';
 
 const Reference = () => {
   return (
-    <Page
+    <DetailedPage
       stack={['Wordpress']}
       type="Commercial"
-      images={['img/references/loewen-voerstetten_full.png'S]}
+      images={['img/references/loewen-voerstetten_full.png']}
       description=""
       title="Gasthaus Zum Löwen"
       url="https://loewen-voerstetten.de"

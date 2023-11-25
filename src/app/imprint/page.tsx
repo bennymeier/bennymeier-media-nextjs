@@ -1,5 +1,4 @@
 import Main from '@/components/Main';
-import SEO from '@/components/Metadata';
 import { Link } from '@chakra-ui/next-js';
 import {
   Box,
@@ -14,7 +13,6 @@ import {
 const Imprint = () => {
   return (
     <>
-      <SEO />
       <Main>
         <Flex alignItems="center" flexDirection="column">
           <Heading as="h1" size="md">

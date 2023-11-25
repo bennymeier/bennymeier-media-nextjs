@@ -1,8 +1,8 @@
-import Page from '@/components/DetailedPage';
+import DetailedPage from '@/components/DetailedPage';
 
 const Reference = () => {
   return (
-    <Page
+    <DetailedPage
       stack={['Bootstrap']}
       type="Commercial"
       images={['img/references/gehirnmetabologie_full.png']}
