@@ -12,8 +12,8 @@ const Services = () => {
         <Text>
           As a passionate web developer, I can help you kickstart your online
           presence with a professional website. Whether you need a blog, a
-          community platform, or a corporate/club site, I'll delve into your
-          ideas and assist you in reaching the maximum potential!
+          community platform, or a corporate/club site, I&apos;ll delve into
+          your ideas and assist you in reaching the maximum potential!
         </Text>
         <Box>
           <SimpleGrid minChildWidth="320px" spacing="40px">
