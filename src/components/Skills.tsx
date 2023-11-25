@@ -7,35 +7,67 @@ import {
   UnorderedList,
   useColorModeValue,
 } from '@chakra-ui/react';
+import {
+  IconBrandBootstrap,
+  IconBrandCss3,
+  IconBrandCypress,
+  IconBrandFirebase,
+  IconBrandGit,
+  IconBrandHtml5,
+  IconBrandJavascript,
+  IconBrandMongodb,
+  IconBrandMysql,
+  IconBrandNextjs,
+  IconBrandNodejs,
+  IconBrandNpm,
+  IconBrandPhp,
+  IconBrandPython,
+  IconBrandReact,
+  IconBrandReactNative,
+  IconBrandRedux,
+  IconBrandSass,
+  IconBrandSocketIo,
+  IconBrandTypescript,
+  IconBrandVue,
+  IconBrandWordpress,
+  IconPhotoQuestion,
+  IconSql,
+} from '@tabler/icons-react';
 import Skill from './Skill';
 
 const GOOD_SKILLS = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
-  'Redux',
-  'Next.js',
-  'Node.js',
-  'MongoDB',
-  'Firebase',
-  'SQL',
-  'Bootstrap',
-  'Chakra UI',
-  'Semantic UI',
-  'Wordpress',
-  'Git',
+  { name: 'HTML', icon: IconBrandHtml5 },
+  { name: 'CSS', icon: IconBrandCss3 },
+  { name: 'JavaScript', icon: IconBrandJavascript },
+  { name: 'TypeScript', icon: IconBrandTypescript },
+  { name: 'React', icon: IconBrandReact },
+  { name: 'Next.js', icon: IconBrandNextjs },
+  { name: 'Node.js', icon: IconBrandNodejs },
+  { name: 'MongoDB', icon: IconBrandMongodb },
+  { name: 'Firebase', icon: IconBrandFirebase },
+  { name: 'SQL', icon: IconSql },
+  { name: 'MySQL', icon: IconBrandMysql },
+  { name: 'PostgreSQL', icon: IconPhotoQuestion },
+  { name: 'Bootstrap', icon: IconBrandBootstrap },
+  { name: 'Chakra UI', icon: IconPhotoQuestion },
+  { name: 'Semantic UI', icon: IconPhotoQuestion },
+  { name: 'Wordpress', icon: IconBrandWordpress },
+  { name: 'Git', icon: IconBrandGit },
+  { name: 'NPM', icon: IconBrandNpm },
+  { name: 'Yarn', icon: IconPhotoQuestion },
+  { name: 'Cypress', icon: IconBrandCypress },
+  { name: 'Socket.io', icon: IconBrandSocketIo },
 ];
 
 const OK_SKILLS = [
-  'Vue',
-  'SCSS',
-  'Express.js',
-  'Material UI',
-  'MySQL',
-  'PostgreSQL',
-  'PHP',
+  { name: 'React Native', icon: IconBrandReactNative },
+  { name: 'Python', icon: IconBrandPython },
+  { name: 'Redux', icon: IconBrandRedux },
+  { name: 'Vue', icon: IconBrandVue },
+  { name: 'SCSS', icon: IconBrandSass },
+  { name: 'Express.js', icon: IconPhotoQuestion },
+  { name: 'Material UI', icon: IconPhotoQuestion },
+  { name: 'PHP', icon: IconBrandPhp },
 ];
 
 const Skills = () => {
@@ -73,18 +105,20 @@ const Skills = () => {
       <Flex>
         <Box>
           <Heading size="md">Very good knowledge</Heading>
-          <UnorderedList>
-            {GOOD_SKILLS.map((skill) => {
-              return <Skill skill={skill} key={skill} />;
-            })}
-          </UnorderedList>
+          <Flex gap="2" flexWrap="wrap">
+            {GOOD_SKILLS.map((skill) => (
+              <Skill {...skill} key={skill.name} />
+            ))}
+          </Flex>
         </Box>
         <Box ml="2em">
           <Heading size="md">Some knowledge</Heading>
-          <UnorderedList>
-            {OK_SKILLS.map((skill) => {
-              return <Skill skill={skill} key={skill} />;
-            })}
+          <UnorderedList listStyleType="none">
+            {OK_SKILLS.map((skill) => (
+              <ListItem key={skill.name}>
+                <Skill {...skill} />
+              </ListItem>
+            ))}
           </UnorderedList>
         </Box>
       </Flex>

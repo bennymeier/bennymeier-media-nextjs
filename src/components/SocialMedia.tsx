@@ -1,5 +1,11 @@
 import { Link } from '@chakra-ui/next-js';
-import { Box, Flex, IconButton, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  IconButton,
+  Tooltip,
+  useColorModeValue,
+} from '@chakra-ui/react';
 import {
   IconBrandGithub,
   IconBrandInstagram,
@@ -40,22 +46,23 @@ const SocialMedia = () => {
         borderBottomStyle="solid"
       ></Box>
       <Flex>
-        {SOCIAL_MEDIA.map((media) => {
+        {SOCIAL_MEDIA.map(({ url, icon, name }) => {
           return (
-            <Link
-              aria-label={`Go to my ${media.name} profile`}
-              href={media.url}
-              isExternal
-              margin="0 10px"
-              key={media.url}
-            >
-              <IconButton
-                aria-label={`Open my ${media.name} profile`}
-                fill={fillColor}
+            <Tooltip key={url} label={name}>
+              <Link
+                aria-label={`Go to my ${name} profile`}
+                href={url}
+                isExternal
+                margin="0 10px"
               >
-                {media.icon}
-              </IconButton>
-            </Link>
+                <IconButton
+                  aria-label={`Open my ${name} profile`}
+                  fill={fillColor}
+                >
+                  {icon}
+                </IconButton>
+              </Link>
+            </Tooltip>
           );
         })}
       </Flex>
