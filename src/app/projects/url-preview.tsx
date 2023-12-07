@@ -15,7 +15,6 @@ const Project = () => {
       backend opens the website headless, thanks to the Google Puppeteer
       library, and crawls the text out of some metatags."
       title="URL Preview"
-      url={false}
     />
   );
 };
