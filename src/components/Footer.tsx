@@ -1,5 +1,6 @@
 'use client';
 
+import { Link } from '@chakra-ui/next-js';
 import {
   Box,
   Container,
@@ -51,8 +52,10 @@ export default function LargeWithLogoCentered() {
 
           <Stack>
             <ListHeader>Legal</ListHeader>
-            <Box as="a" href={'#'}>
-              Cookies Policy
+            <Box>
+              <Link aria-label="Go to imprint" href="/imprint">
+                Imprint
+              </Link>
             </Box>
             <Box as="a" href={'#'}>
               Privacy Policy

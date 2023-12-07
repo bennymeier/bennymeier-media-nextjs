@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Heading, SimpleGrid, Text } from '@chakra-ui/react';
+import { Box, SimpleGrid } from '@chakra-ui/react';
 import ReferenceCard from './ReferenceCard';
 
 const REFERENCES = [
@@ -76,11 +76,6 @@ const REFERENCES = [
 const References = () => {
   return (
     <Box className="section" as="section" id="references">
-      <Heading className="heading">My References</Heading>
-      <Text className="description">
-        I design and develop websites for companies and people. Take a look at
-        some of the companies I&apos;ve dedicated my time to.
-      </Text>
       <SimpleGrid columns={[1, 1, 2]} spacing="40px">
         {REFERENCES.map((reference) => {
           return <ReferenceCard key={reference.internalUrl} {...reference} />;

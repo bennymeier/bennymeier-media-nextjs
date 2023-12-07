@@ -8,7 +8,7 @@ import { Box, SimpleGrid, Text } from '@chakra-ui/react';
 const Services = () => {
   return (
     <>
-      <Main>
+      <Main title="Services" description="All my services.">
         <Text>
           As a passionate web developer, I can help you kickstart your online
           presence with a professional website. Whether you need a blog, a

@@ -32,9 +32,6 @@ const SOCIAL_MEDIA = [
   },
 ];
 
-/**
- * @todo Add tooltips to icons, use forwardRef
- */
 const SocialMedia = () => {
   const borderColor = useColorModeValue('teal.300', 'teal.500');
   const fillColor = useColorModeValue('teal.900', 'white');

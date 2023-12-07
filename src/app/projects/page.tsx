@@ -4,7 +4,10 @@ import Projects from '@/components/Projects';
 const Index = () => {
   return (
     <>
-      <Main>
+      <Main
+        title="Projects"
+        description="The list of my projects. Everything was made with ❤️."
+      >
         <Projects />
       </Main>
     </>

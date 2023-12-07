@@ -1,3 +1,5 @@
+'use client';
+
 import Main from '@/components/Main';
 import { Link } from '@chakra-ui/next-js';
 import {
@@ -7,13 +9,13 @@ import {
   Heading,
   ListItem,
   Text,
-  UnorderedList
+  UnorderedList,
 } from '@chakra-ui/react';
 
 const Imprint = () => {
   return (
     <>
-      <Main>
+      <Main title="Imprint">
         <Flex alignItems="center" flexDirection="column">
           <Heading as="h1" size="md">
             Benjamin Meier

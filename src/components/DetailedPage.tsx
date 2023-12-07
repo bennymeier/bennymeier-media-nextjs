@@ -2,27 +2,44 @@
 
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { Link } from '@chakra-ui/next-js';
-import {
-  Alert,
-  AlertIcon,
-  Box,
-  Heading,
-  IconButton,
-  Text,
-} from '@chakra-ui/react';
+import { Alert, AlertIcon, Box, Heading, IconButton } from '@chakra-ui/react';
 import Image from 'next/image';
 import Main from './Main';
 import TechnologyStack from './TechnologyStack';
 
-const DetailedPage = ({
-  title,
-  description: Desc,
-  stack = [],
-  url,
-  images,
-  type,
-  githubUrl = '',
-}) => {
+type DetailedPageProps = {
+  title: string;
+  description: React.ReactNode;
+  stack: string[];
+  url?: string;
+  images: string[];
+  type: any;
+  githubUrl?: string;
+};
+
+const DetailedPage = (props: DetailedPageProps) => {
+  const {
+    title,
+    description,
+    stack = [],
+    url,
+    images,
+    type,
+    githubUrl = '',
+  } = props;
+
+  const Description = () => {
+    if (!description) {
+      return (
+        <Alert status="warning" mb="1em">
+          <AlertIcon />
+          Description coming soon!
+        </Alert>
+      );
+    }
+    return <Description />;
+  };
+
   return (
     <>
       <Main>
@@ -44,18 +61,7 @@ const DetailedPage = ({
               </Link>
             )}
           </Heading>
-          {!Desc && (
-            <Alert status="warning" mb="1em">
-              <AlertIcon />
-              Description coming soon!
-            </Alert>
-          )}
-          {typeof Desc === 'string' && (
-            <Text mt="2em" mb="2em">
-              {Desc}
-            </Text>
-          )}
-          {typeof Desc === 'function' && <Desc />}
+          <Box>{Description()}</Box>
           <TechnologyStack
             type={type}
             stack={stack}
