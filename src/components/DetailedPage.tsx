@@ -9,7 +9,7 @@ import TechnologyStack from './TechnologyStack';
 
 type DetailedPageProps = {
   title: string;
-  description: React.ReactNode;
+  description: string;
   stack: string[];
   url?: string;
   images: string[];
