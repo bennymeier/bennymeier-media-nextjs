@@ -24,11 +24,13 @@ const Main = ({ children, title = '', description = '' }) => {
         '2xl': '85em',
       }}
     >
-      <Box mt="8">
-        <Heading as="h1">{title}</Heading>
-        <Text>{description}</Text>
-        {title && <Divider mt="4" borderBottomWidth="3px" />}
-      </Box>
+      {(title || description) && (
+        <Box mt="8">
+          <Heading as="h1">{title}</Heading>
+          <Text>{description}</Text>
+          {title && <Divider mt="4" borderBottomWidth="3px" />}
+        </Box>
+      )}
       <Stack as={Box} spacing={{ base: 8, md: 14 }} py={{ base: 5, md: 10 }}>
         {children}
       </Stack>

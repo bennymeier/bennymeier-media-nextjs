@@ -1,7 +1,6 @@
 'use client';
 
 import { Box, Heading, Text, Tooltip } from '@chakra-ui/react';
-import { calculateAge } from '../utils';
 import Me from './Me';
 
 const Introduction = () => {
@@ -27,7 +26,7 @@ const Introduction = () => {
         functionally robust. Explore my work, learn about my journey, and let's
         connect to bring your next project to life.
       </Text>
-      <Text>
+      {/* <Text>
         I'm a {calculateAge()} year old student From 2017 to 2020, I
         successfully completed my training as an IT specialist for application
         development. From 2020 to 2023, I successfully completed my studies in
@@ -42,7 +41,7 @@ const Introduction = () => {
         help you to get started with a professional website on the internet. No
         matter if you need a blog, a community, or a company or club site: I
         will deal with your idea and help you to reach the maximum!
-      </Box>
+      </Box> */}
     </Box>
   );
 };

@@ -2,7 +2,6 @@ import Contact from '@/components/Contact';
 import Header from '@/components/Header';
 import Introduction from '@/components/Introduction';
 import Main from '@/components/Main';
-import Skills from '@/components/Skills';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -17,7 +16,7 @@ const Home = () => {
       <Header />
       <Main>
         <Introduction />
-        <Skills />
+        {/* <Skills /> */}
         <Contact />
       </Main>
     </>

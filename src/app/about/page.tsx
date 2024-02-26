@@ -54,9 +54,11 @@ const About = () => {
             </Text>
           </Flex>
           <Box margin="100px auto 170px">
-            <Flex gap="40px" alignItems="center">
-              <Heading>What's a Fullstack Developer?</Heading>
-              <Text>
+            <Flex gap="40px" alignItems="center" flexWrap="wrap">
+              <Heading width={{ md: '100%', lg: 'calc(50% - 20px)' }}>
+                What's a Fullstack Developer?
+              </Heading>
+              <Text width={{ md: '100%', lg: 'calc(50% - 20px)' }}>
                 A Fullstack Developer is a software engineer skilled in both
                 frontend and backend development. This means they can handle
                 everything from designing user interfaces and user experiences
