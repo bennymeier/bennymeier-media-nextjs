@@ -5,6 +5,7 @@ import {
   Box,
   Container,
   Flex,
+  Heading,
   Icon,
   SimpleGrid,
   Stack,
@@ -15,11 +16,7 @@ import { IconHeart } from '@tabler/icons-react';
 import Image from 'next/image';
 
 const ListHeader = ({ children }) => {
-  return (
-    <Text fontWeight={'500'} fontSize={'lg'}>
-      {children}
-    </Text>
-  );
+  return <Heading fontWeight={'500'}>{children}</Heading>;
 };
 
 export default function LargeWithLogoCentered() {
@@ -119,15 +116,15 @@ export default function LargeWithLogoCentered() {
             width="150"
           />
         </Flex>
-        <Box pt={6} fontSize={'sm'} textAlign={'center'}>
-          <Text>Copyright © 2016 - {year}</Text>
+        <Box pt={6} textAlign={'center'}>
+          <Text fontSize={'sm'}>Copyright © 2016 - {year}</Text>
           <Flex
             justifyContent="center"
             alignItems="center"
             flexDirection="row"
             gap="10px"
           >
-            <Text>Made with Next.js</Text>
+            <Text fontSize={'sm'}>Made with Next.js</Text>
             <Icon
               as={IconHeart}
               color="red.400"

@@ -108,8 +108,8 @@ const DesktopNavItem = ({ name, href }) => {
       <Link
         p={2}
         href={href ?? '#'}
-        fontSize={'sm'}
-        fontWeight={500}
+        fontSize={'lg'}
+        fontWeight="500"
         color={useColorModeValue(
           isActive ? 'teal.500' : 'gray.600',
           isActive ? 'teal.400' : 'gray.200'
@@ -156,7 +156,8 @@ const MobileNavItem = ({ name, href }) => {
         _hover={{
           textDecoration: 'none',
         }}
-        fontWeight={600}
+        fontWeight="500"
+        fontSize="lg"
         color={useColorModeValue(
           isActive ? 'teal.500' : 'gray.600',
           isActive ? 'teal.400' : 'gray.200'

@@ -1,5 +1,6 @@
 export const MENU_ENTRIES = [
   { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
   { name: 'Services', href: '/services' },
   { name: 'Projects', href: '/projects' },
   { name: 'References', href: '/references' },

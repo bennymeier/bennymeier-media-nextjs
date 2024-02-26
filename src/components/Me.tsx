@@ -6,10 +6,10 @@ const Me = () => {
   return (
     <Image
       alt="Picture of Benny Meier"
-      src="/img/about_me_smaller.png"
+      src="/img/me_usa.jpg"
       priority={true}
-      height="200"
-      width="600"
+      height="500"
+      width="1180"
       style={{ margin: '3em 0 2em 0' }}
     />
   );
