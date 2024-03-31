@@ -4,6 +4,7 @@ import Main from '@/components/Main';
 import WorkExperience from '@/components/WorkExperience';
 import {
   Box,
+  Divider,
   Flex,
   Heading,
   ListItem,
@@ -72,101 +73,104 @@ const About = () => {
               </Text>
             </Flex>
           </Box>
-          <Heading>Curriculum vitae</Heading>
-          <UnorderedList listStyleType="none" margin="0" padding="0">
-            <WorkExperience
-              company="INTREXX GmbH"
-              date="Oct 2023 - Now"
-              title="Software Developer"
-            />
-            <WorkExperience
-              company="INTREXX GmbH"
-              date="Oct 2020 - Oct 2023"
-              title="Dual Student Business Informatics - Application Management"
-              description={
-                <UnorderedList>
-                  <ListItem>
-                    DMS for digital archiving and interface connection in the
-                    Finance area introduced
-                  </ListItem>
-                  <ListItem>
-                    Conception, analysis and development of a dashboard for the
-                    accounting
-                  </ListItem>
-                  <ListItem>
-                    Tech talk with pre-sales for customers about designing SVG
-                    images and form validation
-                  </ListItem>
-                  <ListItem>
-                    Create UI drafts for application development team
-                  </ListItem>
-                  <ListItem>
-                    Project work I for university: Development of a dashboard to
-                    determine project statuses
-                  </ListItem>
-                  <ListItem>
-                    Project work II for university: Integration of document
-                    management software into an existing app for the digital
-                    archiving of documents, as well as the further development
-                    of this app
-                  </ListItem>
-                  <ListItem>
-                    Elaboration in the subject of "New Concepts": Determining
-                    the maturity level of cloud databases in companies using
-                    guidelines and a catalog of key questions
-                  </ListItem>
-                  <ListItem>
-                    Bachelor thesis: Conception and implementation of an image
-                    annotation tool for the low-code platform Intrexx
-                  </ListItem>
-                </UnorderedList>
-              }
-            />
-            <WorkExperience
-              company="INTREXX GmbH"
-              date="Sep 2017 - Jul 2020"
-              title="Apprenticeship - Frontend Developer"
-              description={
-                <UnorderedList>
-                  <ListItem>
-                    Demonstrated team-oriented skills while participating in
-                    sprint reviews, planning sessions, and retrospective
-                    presentations within an agile team environment
-                  </ListItem>
-                  <ListItem>
-                    For a new prototype I helped in a small team to develop a
-                    chat web and desktop application using React, Redux,
-                    TypeScript, and Electron. For messaging we used XMPP with
-                    Stanza.io, video conferencing with Jitsi, authentication
-                    with OpenID Connect and Keycloak
-                  </ListItem>
-                  <ListItem>
-                    Ensuring quality with unit and integration tests and
-                    Application of TDD (Jasmine, Cypress, Karma, Selenium)
-                  </ListItem>
-                  <ListItem>
-                    Maintaining the web build system (TypeScript, Webpack,
-                    Babel, Jasmine, Gulp)
-                  </ListItem>
-                  <ListItem>
-                    Refactored and designed a drag & drop sortable list
-                  </ListItem>
-                  <ListItem>
-                    Refactored modals, tooltips, toasts/alerts
-                  </ListItem>
-                  <ListItem>
-                    Refactored numeric input fields (formatting, validations)
-                  </ListItem>
-                  <ListItem>Refactored old XSLT/XML transformations</ListItem>
-                  <ListItem>
-                    Final project: development of a link preview like on
-                    LinkedIn, Facebook, and Discord (Node.js, Express,
-                    TypeScript, React, Redis)
-                  </ListItem>
-                </UnorderedList>
-              }
-            />
-          </UnorderedList>
+          <Divider />
+          <Box marginTop="100">
+            <Heading>Curriculum vitae</Heading>
+            <UnorderedList listStyleType="none" margin="0" padding="0">
+              <WorkExperience
+                company="INTREXX GmbH"
+                date="Oct 2023 - Now"
+                title="Software Developer"
+              />
+              <WorkExperience
+                company="INTREXX GmbH"
+                date="Oct 2020 - Oct 2023"
+                title="Dual Student Business Informatics - Application Management"
+                description={
+                  <UnorderedList>
+                    <ListItem>
+                      DMS for digital archiving and interface connection in the
+                      Finance area introduced
+                    </ListItem>
+                    <ListItem>
+                      Conception, analysis and development of a dashboard for the
+                      accounting
+                    </ListItem>
+                    <ListItem>
+                      Tech talk with pre-sales for customers about designing SVG
+                      images and form validation
+                    </ListItem>
+                    <ListItem>
+                      Create UI drafts for application development team
+                    </ListItem>
+                    <ListItem>
+                      Project work I for university: Development of a dashboard to
+                      determine project statuses
+                    </ListItem>
+                    <ListItem>
+                      Project work II for university: Integration of document
+                      management software into an existing app for the digital
+                      archiving of documents, as well as the further development
+                      of this app
+                    </ListItem>
+                    <ListItem>
+                      Elaboration in the subject of "New Concepts": Determining
+                      the maturity level of cloud databases in companies using
+                      guidelines and a catalog of key questions
+                    </ListItem>
+                    <ListItem>
+                      Bachelor thesis: Conception and implementation of an image
+                      annotation tool for the low-code platform Intrexx
+                    </ListItem>
+                  </UnorderedList>
+                }
+              />
+              <WorkExperience
+                company="INTREXX GmbH"
+                date="Sep 2017 - Jul 2020"
+                title="Apprenticeship - Frontend Developer"
+                description={
+                  <UnorderedList>
+                    <ListItem>
+                      Demonstrated team-oriented skills while participating in
+                      sprint reviews, planning sessions, and retrospective
+                      presentations within an agile team environment
+                    </ListItem>
+                    <ListItem>
+                      For a new prototype I helped in a small team to develop a
+                      chat web and desktop application using React, Redux,
+                      TypeScript, and Electron. For messaging we used XMPP with
+                      Stanza.io, video conferencing with Jitsi, authentication
+                      with OpenID Connect and Keycloak
+                    </ListItem>
+                    <ListItem>
+                      Ensuring quality with unit and integration tests and
+                      Application of TDD (Jasmine, Cypress, Karma, Selenium)
+                    </ListItem>
+                    <ListItem>
+                      Maintaining the web build system (TypeScript, Webpack,
+                      Babel, Jasmine, Gulp)
+                    </ListItem>
+                    <ListItem>
+                      Refactored and designed a drag & drop sortable list
+                    </ListItem>
+                    <ListItem>
+                      Refactored modals, tooltips, toasts/alerts
+                    </ListItem>
+                    <ListItem>
+                      Refactored numeric input fields (formatting, validations)
+                    </ListItem>
+                    <ListItem>Refactored old XSLT/XML transformations</ListItem>
+                    <ListItem>
+                      Final project: development of a link preview like on
+                      LinkedIn, Facebook, and Discord (Node.js, Express,
+                      TypeScript, React, Redis)
+                    </ListItem>
+                  </UnorderedList>
+                }
+              />
+            </UnorderedList>
+          </Box>
         </Box>
       </Main>
     </>

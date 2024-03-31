@@ -2,5 +2,6 @@
 
 ## Install
 
-Install packages `yarn install`
-Start server `yarn dev`
+Install packages `npm i`
+
+Start dev server `npm run dev`

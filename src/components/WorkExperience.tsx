@@ -21,7 +21,7 @@ export default function WorkExperience({
         bottom="0"
         width="15px"
         _before={{
-          background: 'red.400',
+          background: 'teal.300',
           border: '3px solid transparent',
           borderRadius: '100%',
           content: '""',
@@ -35,7 +35,7 @@ export default function WorkExperience({
         _after={{
           content: '""',
           width: '3px',
-          background: 'gray.400',
+          background: 'gray.300',
           display: 'block',
           position: 'absolute',
           top: '24px',

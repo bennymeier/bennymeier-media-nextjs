@@ -4,9 +4,16 @@ import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { Link } from '@chakra-ui/next-js';
 import {
   Box,
+  Button,
   Collapse,
   Flex,
   IconButton,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
   Stack,
   useColorModeValue,
   useDisclosure,
@@ -14,6 +21,7 @@ import {
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { MENU_ENTRIES } from 'src/utils/constants';
+import ContactForm from './ContactForm';
 import LayoutToggle from './LayoutToggle';
 
 const Logo = () => {
@@ -37,55 +45,76 @@ const Logo = () => {
 
 export default function Navbar() {
   const { isOpen, onToggle } = useDisclosure();
+  const {
+    isOpen: contactFormIsOpen,
+    onOpen: contactFormOnOpen,
+    onClose: contactFormOnClose,
+  } = useDisclosure();
 
   return (
-    <Box>
-      <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
-        py={{ base: 2 }}
-        px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}
-      >
+    <>
+      <Box>
         <Flex
-          flex={{ base: 1, md: 'auto' }}
-          ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
+          bg={useColorModeValue('white', 'gray.800')}
+          color={useColorModeValue('gray.600', 'white')}
+          minH={'60px'}
+          py={{ base: 2 }}
+          px={{ base: 4 }}
+          borderBottom={1}
+          borderStyle={'solid'}
+          borderColor={useColorModeValue('gray.200', 'gray.900')}
+          align={'center'}
         >
-          <IconButton
-            onClick={onToggle}
-            icon={
-              isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-            }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
-          />
-        </Flex>
-        <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Logo />
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-            <DesktopNav />
+          <Flex
+            flex={{ base: 1, md: 'auto' }}
+            ml={{ base: -2 }}
+            display={{ base: 'flex', md: 'none' }}
+          >
+            <IconButton
+              onClick={onToggle}
+              icon={
+                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
+              }
+              variant={'ghost'}
+              aria-label={'Toggle Navigation'}
+            />
           </Flex>
+          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
+            <Logo />
+            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+              <DesktopNav />
+            </Flex>
+          </Flex>
+
+          <Stack
+            flex={{ base: 1, md: 0 }}
+            justify={'flex-end'}
+            direction={'row'}
+            spacing={6}
+          >
+            <Button colorScheme="teal" color="white" fontWeight="unset" size={{
+              xs: "sm", sm: "sm", md: "md", lg: "md"
+            }} paddingX={{ base: "0.5em" }} onClick={contactFormOnOpen}>Contact</Button>
+            <LayoutToggle />
+          </Stack>
         </Flex>
 
-        <Stack
-          flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
-          spacing={6}
-        >
-          <LayoutToggle />
-        </Stack>
-      </Flex>
+        <Collapse in={isOpen} animateOpacity>
+          <MobileNav />
+        </Collapse>
+      </Box>
 
-      <Collapse in={isOpen} animateOpacity>
-        <MobileNav />
-      </Collapse>
-    </Box>
+      <Modal onClose={contactFormOnClose} size="xl" isOpen={contactFormIsOpen} closeOnOverlayClick={false}>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Contact</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <ContactForm handleClose={contactFormOnClose} />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+    </>
   );
 }
 

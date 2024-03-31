@@ -7,6 +7,8 @@ const LayoutToggle = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <IconButton
+      size={{ base: "sm", sm: "sm", md: "md", lg: "md" }}
+      paddingX={{ base: "0.5em" }}
       onClick={toggleColorMode}
       aria-label="Switch to dark mode"
       icon={

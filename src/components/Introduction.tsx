@@ -19,11 +19,11 @@ const Introduction = () => {
         innovative Fullstack Developer specializing in web development and
         enthusiast of the{' '}
         <Tooltip label="MongoDB + Express.js + React + Node.js">
-          MERN-Stack
+          <Box as="span" textDecoration="underline" textDecorationColor="teal.400">MERN-Stack</Box>
         </Tooltip>
         . With a keen eye for detail and a relentless drive for perfection, I
         create digital experiences that are both visually appealing and
-        functionally robust. Explore my work, learn about my journey, and let's
+        functionally robust. Explore my work, learn about my journey and let's
         connect to bring your next project to life.
       </Text>
       {/* <Text>
